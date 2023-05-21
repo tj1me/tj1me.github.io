@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="判断与循环">
+<meta property="og:type" content="article">
+<meta property="og:title" content="判断与循环">
+<meta property="og:url" content="http://example.com/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/index.html">
+<meta property="og:site_name" content="tj1me blog">
+<meta property="og:description" content="判断与循环">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_JMcITj2gBi.png">
+<meta property="og:image" content="http://example.com/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_756jBOc85i.png">
+<meta property="og:image" content="http://example.com/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_GCHZs1E_xf.png">
+<meta property="og:image" content="http://example.com/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_ZlmBZXXlYr.png">
+<meta property="og:image" content="http://example.com/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_cnq4ah8n83.png">
+<meta property="og:image" content="http://example.com/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_FG34CG7l-0.png">
+<meta property="og:image" content="http://example.com/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_tt5pVjbl3C.png">
+<meta property="og:image" content="http://example.com/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_46EXNlSuAa.png">
+<meta property="og:image" content="http://example.com/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_-kyFe9WXed.png">
+<meta property="og:image" content="http://example.com/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_S3q7dKexR0.png">
+<meta property="og:image" content="http://example.com/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_uHCgZtnQZ7.png">
+<meta property="og:image" content="http://example.com/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_E3V5Tg7jAi.png">
+<meta property="og:image" content="http://example.com/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_UXu39Nn2Ni.png">
+<meta property="article:published_time" content="2023-05-21T13:56:09.000Z">
+<meta property="article:modified_time" content="2023-05-21T14:17:20.089Z">
+<meta property="article:author" content="tj1me">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_JMcITj2gBi.png">
+
+
+<link rel="canonical" href="http://example.com/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/","path":"2023/05/21/判断与循环/","title":"判断与循环"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>判断与循环 | tj1me blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="tj1me blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">tj1me blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF"><span class="nav-number">1.</span> <span class="nav-text">判断与循环</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">1.1.</span> <span class="nav-text">流程控制语句的分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84"><span class="nav-number">1.2.</span> <span class="nav-text">顺序结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5"><span class="nav-number">1.3.</span> <span class="nav-text">判断语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#if%E8%AF%AD%E5%8F%A5%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.3.1.</span> <span class="nav-text">if语句格式:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Switch%E8%AF%AD%E5%8F%A5"><span class="nav-number">1.4.</span> <span class="nav-text">Switch语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.4.1.</span> <span class="nav-text">格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Switch%E5%92%8Cif%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">1.4.2.</span> <span class="nav-text">Switch和if的使用场景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="nav-number">1.5.</span> <span class="nav-text">循环结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#for%E7%9A%84%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="nav-number">1.5.1.</span> <span class="nav-text">for的循环结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#while%E5%BE%AA%E7%8E%AF"><span class="nav-number">1.5.2.</span> <span class="nav-text">while循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#do%E2%80%A6while%E5%BE%AA%E7%8E%AF"><span class="nav-number">1.5.3.</span> <span class="nav-text">do…while循环</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="tj1me"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">tj1me</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/tj1me" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;tj1me" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="tj1me">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="tj1me blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="判断与循环 | tj1me blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          判断与循环
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-05-21 21:56:09 / 修改时间：22:17:20" itemprop="dateCreated datePublished" datetime="2023-05-21T21:56:09+08:00">2023-05-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="判断与循环"><a href="#判断与循环" class="headerlink" title="判断与循环"></a>判断与循环</h1><span id="more"></span>
+
+<h2 id="流程控制语句的分类"><a href="#流程控制语句的分类" class="headerlink" title="流程控制语句的分类"></a>流程控制语句的分类</h2><p>①顺序结构②判断和选择结构 (if,Switch)③循环结构(for,while,do,while)</p>
+<h2 id="顺序结构"><a href="#顺序结构" class="headerlink" title="顺序结构"></a>顺序结构</h2><p>没有特定的语法结构,都是按先后顺序依次执行,大多数代码都是这样的.</p>
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_JMcITj2gBi.png"></p>
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_756jBOc85i.png"></p>
+<h2 id="判断语句"><a href="#判断语句" class="headerlink" title="判断语句"></a>判断语句</h2><h3 id="if语句格式"><a href="#if语句格式" class="headerlink" title="if语句格式:"></a>if语句格式:</h3><p>类型①if (关系表达式) {</p>
+<p>&amp;#x20;    语句体;</p>
+<p>}</p>
+<p>执行流程:先计算表达式的值,如果成立就执行语句体,否则不执行.最后继续执行之后的代码</p>
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_GCHZs1E_xf.png"></p>
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_ZlmBZXXlYr.png"></p>
+<p>注意事项:</p>
+<p>如果要对一个布尔变量进行判断,不要直接写&#x3D;&#x3D;,直接把变量写在小括号里.</p>
+<p>类型② if (关系表达式) {</p>
+<p>语句体1; &amp;#x20;</p>
+<p>} else {</p>
+<p>语句体2; &amp;#x20;</p>
+<p>}</p>
+<p>执行流程:先计算表达式的值,如果成立就执行语句体1,否则执行语句体2.最后继续执行之后的代码</p>
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_cnq4ah8n83.png"></p>
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_FG34CG7l-0.png"></p>
+<p>类型③</p>
+<p>if (关系表达式1) {</p>
+<p>语句体1; &amp;#x20;</p>
+<p>} else if (关系表达式2) {</p>
+<p>语句体2; &amp;#x20;</p>
+<p>}&amp;#x20;</p>
+<p>…</p>
+<p>else {</p>
+<p>语句体n+1;</p>
+<p>}</p>
+<p>执行流程:先计算表达式的值,如果成立就执行语句体1,如果不成立就关系表达式2, 接着如果成立就执行语句体2,如果不成立就关系表达式3,一直循环.最后继续执行之后的代码</p>
+<h2 id="Switch语句"><a href="#Switch语句" class="headerlink" title="Switch语句"></a>Switch语句</h2><h3 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">switch (表达式) &#123;</span><br><span class="line">  case 1:</span><br><span class="line">    语句体1;</span><br><span class="line">    break;</span><br><span class="line">  case 2:</span><br><span class="line">    语句体2;</span><br><span class="line">    break;</span><br><span class="line">  ...</span><br><span class="line">  default:</span><br><span class="line">    语句体n+1;</span><br><span class="line">    break;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>执行流程:先计算表达式的值,然后和case依次比较,如果有对应的值就会执行相应的语句,如果在执行过程中遇到break就会结束.最后如果都不匹配就会执行default语句然后结束程序.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Scanner sc = new Scanner(System.in);</span><br><span class="line">        System.out.println(&quot;请输入一个整数表示星期&quot;);</span><br><span class="line">        int week = sc.nextInt();</span><br><span class="line">        switch (week)&#123;</span><br><span class="line">            case 1:</span><br><span class="line">                System.out.println(&quot;跑步&quot;);</span><br><span class="line">                break;</span><br><span class="line">            case 2:</span><br><span class="line">                System.out.println(&quot;游泳&quot;);</span><br><span class="line">                break;</span><br><span class="line">            case 3:</span><br><span class="line">                System.out.println(&quot;慢走&quot;);</span><br><span class="line">                break;</span><br><span class="line">            case 4:</span><br><span class="line">                System.out.println(&quot;动感单车&quot;);</span><br><span class="line">                break;</span><br><span class="line">            case 5:</span><br><span class="line">                System.out.println(&quot;拳击&quot;);</span><br><span class="line">                break;</span><br><span class="line">            case 6:</span><br><span class="line">                System.out.println(&quot;爬山&quot;);</span><br><span class="line">                break;</span><br><span class="line">            case 7:</span><br><span class="line">                System.out.println(&quot;好好吃一顿&quot;);</span><br><span class="line">                break;</span><br><span class="line">            default:</span><br><span class="line">                System.out.println(&quot;输入错误，没有这个星期&quot;);</span><br><span class="line">                break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_tt5pVjbl3C.png"></p>
+<p>注:1.default可以放在任意位置也可以省略不写.</p>
+<p>不写break会引发case穿透现象</p>
+<h3 id="Switch和if的使用场景"><a href="#Switch和if的使用场景" class="headerlink" title="Switch和if的使用场景"></a>Switch和if的使用场景</h3><p>当我们需要对一个范围进行判断的时候，用if的第三种格式</p>
+<p>当我们把有限个数据列举出来，选择其中一个执行的时候，用switch语句</p>
+<p>比如：</p>
+<p>①小明的考试成绩，如果用switch，那么需要写100个case，太麻烦了，所以用if简单。</p>
+<p>②如果是星期，月份，客服电话中0~9的功能选择就可以用switch</p>
+<h2 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h2><h3 id="for的循环结构"><a href="#for的循环结构" class="headerlink" title="for的循环结构"></a>for的循环结构</h3><p>在满足循环条件的情况下,反复执行一段代码,当反复执行这一段代码时应在适当时刻将判断条件改为false,将此循环结束,否则循环会一直下去成为死循环.</p>
+<p>格式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for (初始化语句;条件判断语句;条件控制语句) &#123;</span><br><span class="line">  循环体语句;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>格式解释：</strong></p>
+<p>初始化语句： 用于表示循环开启时的起始状态，简单说就是循环开始的时候什么样</p>
+<p>条件判断语句：用于表示循环反复执行的条件，简单说就是判断循环是否能一直执行下去</p>
+<p>条件控制语句：用于表示循环执行中每次变化的内容，简单说就是控制循环是否能执行下去</p>
+<p>循环体语句： 用于表示循环反复执行的内容，简单说就是循环    反复执行的事情</p>
+<p>执行流程:先执行初始化语句,执行条件判断语句，看其结果是true还是false,如果是false，循环结束,如果是true，继续执行,执行循环体语句,执行条件控制语句,再执行条件判断语句…..一直循环.</p>
+<p>for循环书写的技巧</p>
+<p>①确定循环的条件</p>
+<p>②确定循环的结束条件</p>
+<p>③确定循环需要重复执行的代码</p>
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_46EXNlSuAa.png"></p>
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_-kyFe9WXed.png"></p>
+<h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3><p>格式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">初始化语句;</span><br><span class="line">while(条件判断语句)&#123;</span><br><span class="line">  循环体;</span><br><span class="line">  条件控制语句;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_S3q7dKexR0.png"></p>
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_uHCgZtnQZ7.png"></p>
+<h3 id="do…while循环"><a href="#do…while循环" class="headerlink" title="do…while循环"></a>do…while循环</h3><p>格式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">初始化语句;</span><br><span class="line">do&#123;</span><br><span class="line">    循环体;</span><br><span class="line">    条件控制语句;</span><br><span class="line">&#125;while(条件判断语句);</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_E3V5Tg7jAi.png"></p>
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_UXu39Nn2Ni.png"></p>
+<p>三种格式的区别:</p>
+<ul>
+<li>for和while循环，是先判断，再执行。</li>
+<li>do…while是先执行，再判断。</li>
+<li>当知道循环次数或者循环范围的时候，用for循环。</li>
+<li>当不知道循环次数，也不知道循环范围，但是知道循环的结束条件时，用while循环。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/05/21/%E8%BF%90%E7%AE%97%E7%AC%A6/" rel="prev" title="运算符">
+                  <i class="fa fa-chevron-left"></i> 运算符
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/05/21/%E5%BE%AA%E7%8E%AF%E9%AB%98%E7%BA%A7/" rel="next" title="循环高级">
+                  循环高级 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2023.5.20 – 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">tj1me</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org//" rel="noopener" target="_blank">NexT.undefined</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

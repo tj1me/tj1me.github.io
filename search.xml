@@ -1,0 +1,1289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>运算符</title>
+    <url>/2023/05/21/%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
+    <content><![CDATA[<h1 id="运算符-amp-x20"><a href="#运算符-amp-x20" class="headerlink" title="运算符&amp;#x20;"></a>运算符&amp;#x20;</h1><span id="more"></span>
+
+<p>+- *&#x2F;%的用法</p>
+<p><img src="/2023/05/21/%E8%BF%90%E7%AE%97%E7%AC%A6/image_mdoQc2fAFG.png"></p>
+<p>输出</p>
+<p><img src="/2023/05/21/%E8%BF%90%E7%AE%97%E7%AC%A6/image_w5Ui8MgrVH.png"></p>
+<p><img src="/2023/05/21/%E8%BF%90%E7%AE%97%E7%AC%A6/image_-ThkS_hq4e.png"></p>
+<p><img src="/2023/05/21/%E8%BF%90%E7%AE%97%E7%AC%A6/image_iKXFAqEkuS.png"></p>
+<p>结论:1.整数参与计算结果只能是整数</p>
+<p>&amp;#x20;       2.如果有在计算时有小数参与结果有可能不精确</p>
+<p>练习：录入一个三位数 拆分成个位，十位，百位</p>
+<p>公式:</p>
+<p>个位：数值%10</p>
+<p>十位:  数值&#x2F;10%10</p>
+<p>百位:  数值&#x2F;100%10 &amp;#x20;</p>
+<p>千位:  数值&#x2F;1000%10</p>
+<p>………</p>
+<p><img src="/2023/05/21/%E8%BF%90%E7%AE%97%E7%AC%A6/image_iD27qBht6r.png"></p>
+<p><img src="/2023/05/21/%E8%BF%90%E7%AE%97%E7%AC%A6/image_35T_Ah7Vjb.png"></p>
+<p>数字进行运算时,数据类型不一样不能运算,要转成一样的,才能运算.</p>
+<p>类型转换的分类:</p>
+<p>①隐式转换 ·取值范围小的数值→取值范围大的数值(程序自动实现转换)</p>
+<p>取值范围排序: byte→short→int→long→float→double</p>
+<p>byte,short,char先提升为int,在计算</p>
+<p>例:int a&#x3D;10:</p>
+<p>&amp;#x20;   double b&#x3D;a; [^1]</p>
+<p>②强制转换<a href="%E5%8F%AF%E8%83%BD%E4%BC%9A%E5%8F%91%E7%94%9F%E6%95%B0%E6%8D%AE%E9%94%99%E4%B9%B1">^2</a>·取值范围大的数值→取值范围小的数值</p>
+<p>代码格式;目标数据类型 变量名&#x3D;(目标数据类型)<a href="%E6%83%B3%E8%BD%AC%E8%B0%81%E5%B0%B1%E5%9C%A8%E6%8B%AC%E5%8F%B7%E9%87%8C%E5%86%99%E8%B0%81">^3</a>被强制转换的数据</p>
+<p>例:double a&#x3D;12.3;</p>
+<p>&amp;#x20;    nit b&#x3D;(int) a;</p>
+<h2 id="自增自减运算符"><a href="#自增自减运算符" class="headerlink" title="自增自减运算符"></a>自增自减运算符</h2><p>＋＋(变量值加一)</p>
+<p>－－(变量值减一)</p>
+<p><img src="/2023/05/21/%E8%BF%90%E7%AE%97%E7%AC%A6/image_idzp_-YFhZ.png"></p>
+<p><img src="/2023/05/21/%E8%BF%90%E7%AE%97%E7%AC%A6/image_edmztFgN5h.png"></p>
+<p>不管是先++，还是后++。单独写在一行的时候，运算结果是一模一样的。</p>
+<p>赋值运算符 &#x3D;</p>
+<h1 id="扩展赋值运算符"><a href="#扩展赋值运算符" class="headerlink" title="扩展赋值运算符"></a>扩展赋值运算符</h1><p>+&#x3D;、-&#x3D;、 *&#x3D;、&#x2F;&#x3D;、%&#x3D;;(就是把左边跟右边进行运算，把最终的结果赋值给左边，对右边没有任何影响)</p>
+<h1 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h1><p>&amp;：逻辑与（而且）</p>
+<p>两边都为真，结果才是真，只要有一个为假，那么结果就是假。</p>
+<p>|：逻辑或（或者）</p>
+<p>两边都为假，结果才是假，只要有一个为真，那么结果就是真。</p>
+<p>应用场景:用户登录比较用户名和密码的对错(&amp;)</p>
+<p>^:(异或)</p>
+<p>如果两边相同,结果为false,如果两边不同,结果为true.</p>
+<p>!;(取反)</p>
+<p>一次用一个</p>
+<h1 id="短路逻辑运算符"><a href="#短路逻辑运算符" class="headerlink" title="短路逻辑运算符"></a>短路逻辑运算符</h1><p>&amp;&amp;:(和&amp;运算结果一样)</p>
+<p>||:(和|运算结果一样)</p>
+<p>当左边不能确定整个表达式的结果，右边才会执行。</p>
+<p>当左边能确定整个表达式的结果，那么右边就不会执行了。从而提高了代码的运行效率。</p>
+<h2 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h2><p>格式:关系表达式 ？ 表达式1 ：表达式2 ；</p>
+<p>代码规则:①计算关系表达式的值。</p>
+<p>&amp;#x20;              ②如果关系表达式的值为真，那么执行表达式1。</p>
+<p>&amp;#x20;               ③如果关系表达式的值为假，那么执行表达式2。</p>
+<p>三元运算符的最终结果一定要被使用，要么赋值给一个变量，要么直接打印出来。</p>
+<p><img src="/2023/05/21/%E8%BF%90%E7%AE%97%E7%AC%A6/image_xmiBzwaH5C.png"></p>
+<p><img src="/2023/05/21/%E8%BF%90%E7%AE%97%E7%AC%A6/image_Ny6X1MxK-f.png"></p>
+<h1 id="运算符优先级"><a href="#运算符优先级" class="headerlink" title="运算符优先级"></a>运算符优先级</h1><p><img src="/2023/05/21/%E8%BF%90%E7%AE%97%E7%AC%A6/image_uhiiJyDTMa.png"></p>
+<p>[^1]: 此时double范围大所以b&#x3D;10.0 小数类型</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>API</title>
+    <url>/2023/05/21/API/</url>
+    <content><![CDATA[<h1 id="API"><a href="#API" class="headerlink" title="API"></a>API</h1><span id="more"></span>
+
+<h1 id="amp-x20-Math类"><a href="#amp-x20-Math类" class="headerlink" title="&amp;#x20;Math类"></a>&amp;#x20;Math类</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>API文档中关于Math类的定义如下：</p>
+<p><img src="/2023/05/21/API/image_147ML66FVf.png"></p>
+<p>Math类所在包为java.lang包，因此在使用的时候不需要进行导包。并且Math类被final修饰了，因此该类是不能被继承的。</p>
+<h2 id="amp-x20-常见方法"><a href="#amp-x20-常见方法" class="headerlink" title="&amp;#x20;常见方法"></a>&amp;#x20;常见方法</h2><p>Math的常见方法如下所示：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">public static int abs(int a)          // 返回参数的绝对值</span><br><span class="line">public static double ceil(double a)        // 返回大于或等于参数的最小整数</span><br><span class="line">public static double floor(double a)      // 返回小于或等于参数的最大整数</span><br><span class="line">public static int round(float a)        // 按照四舍五入返回最接近参数的int类型的值</span><br><span class="line">public static int max(int a,int b)        // 获取两个int值中的较大值</span><br><span class="line">public static int min(int a,int b)        // 获取两个int值中的较小值</span><br><span class="line">public static double pow (double a,double b)  // 计算a的b次幂的值</span><br><span class="line">public static double random()          // 返回一个[0.0,1.0)的随机值</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">                // public static int abs(int a)         返回参数的绝对值</span><br><span class="line">                System.out.println(&quot;-2的绝对值为：&quot; + Math.abs(-2));</span><br><span class="line">                System.out.println(&quot;2的绝对值为：&quot; + Math.abs(2));</span><br><span class="line"></span><br><span class="line">                // public static double ceil(double a)  返回大于或等于参数的最小整数</span><br><span class="line">                System.out.println(&quot;大于或等于23.45的最小整数位：&quot; + Math.ceil(23.45));</span><br><span class="line">                System.out.println(&quot;大于或等于-23.45的最小整数位：&quot; + Math.ceil(-23.45));</span><br><span class="line"></span><br><span class="line">                // public static double floor(double a) 返回小于或等于参数的最大整数</span><br><span class="line">                System.out.println(&quot;小于或等于23.45的最大整数位：&quot; + Math.floor(23.45));</span><br><span class="line">                System.out.println(&quot;小于或等于-23.45的最大整数位：&quot; + Math.floor(-23.45));</span><br><span class="line"></span><br><span class="line">                // public static int round(float a)     按照四舍五入返回最接近参数的int</span><br><span class="line">                System.out.println(&quot;23.45四舍五入的结果为：&quot; + Math.round(23.45));</span><br><span class="line">                System.out.println(&quot;23.55四舍五入的结果为：&quot; + Math.round(23.55));</span><br><span class="line"></span><br><span class="line">                // public static int max(int a,int b)   返回两个int值中的较大值</span><br><span class="line">                System.out.println(&quot;23和45的最大值为: &quot; + Math.max(23, 45));</span><br><span class="line"></span><br><span class="line">                // public static int min(int a,int b)   返回两个int值中的较小值</span><br><span class="line">                System.out.println(&quot;12和34的最小值为: &quot; + Math.min(12 , 34));</span><br><span class="line"></span><br><span class="line">                // public static double pow (double a,double b)返回a的b次幂的值</span><br><span class="line">                System.out.println(&quot;2的3次幂计算结果为: &quot; + Math.pow(2,3));</span><br><span class="line"></span><br><span class="line">                // public static double random()返回值为double的正值，[0.0,1.0)</span><br><span class="line">                System.out.println(&quot;获取到的0-1之间的随机数为: &quot; + Math.random());</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>输出为:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-2的绝对值为：2</span><br><span class="line">2的绝对值为：2</span><br><span class="line">大于或等于23.45的最小整数位：24.0</span><br><span class="line">大于或等于-23.45的最小整数位：-23.0</span><br><span class="line">小于或等于23.45的最大整数位：23.0</span><br><span class="line">小于或等于-23.45的最大整数位：-24.0</span><br><span class="line">23.45四舍五入的结果为：23</span><br><span class="line">23.55四舍五入的结果为：24</span><br><span class="line">23和45的最大值为: 45</span><br><span class="line">12和34的最小值为: 12</span><br><span class="line">2的3次幂计算结果为: 8.0</span><br><span class="line">获取到的0-1之间的随机数为: 0.13374325372180984</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="amp-x20-System类"><a href="#amp-x20-System类" class="headerlink" title="&amp;#x20;System类"></a>&amp;#x20;System类</h1><h2 id="amp-x20-概述"><a href="#amp-x20-概述" class="headerlink" title="&amp;#x20;概述"></a>&amp;#x20;概述</h2><blockquote>
+</blockquote>
+<p>API文档中关于System类的定义如下：</p>
+<p><img src="/2023/05/21/API/image_gybORdHXEh.png"></p>
+<p>System类所在包为java.lang包，因此在使用的时候不需要进行导包。并且System类被final修饰了，因此该类是不能被继承的。</p>
+<p>System包含了系统操作的一些常用的方法。比如获取当前时间所对应的毫秒值，再比如终止当前JVM等等。</p>
+<p>在API文档中没有体现可用的构造方法，因此我们就不能直接通过new关键字去创建System类的对象。同时我们发现System类中的方法都是静态的，因此在使用的时候我们可以直接通过类名去调用（Nested</p>
+<p>Class Summary内部类或者内部接口的描述）。</p>
+<h2 id="常见方法"><a href="#常见方法" class="headerlink" title="常见方法"></a>常见方法</h2><p>System类中的常见方法如下所示：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">public static long currentTimeMillis()      // 获取当前时间所对应的毫秒值</span><br><span class="line">public static void exit(int status)        // 终止当前正在运行的Java虚拟机，0表示正常退出，非零表示异常退出</span><br><span class="line">public static native void arraycopy(Object src,  int  srcPos, Object dest, int destPos, int length); // 进行数值元素copy</span><br></pre></td></tr></table></figure>
+
+<p>演示currentTimeMillis方法:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        long millis = System.currentTimeMillis();</span><br><span class="line">        System.out.println(&quot;当前时间所对应的毫秒值为：&quot; + millis);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>输出为:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">当前时间所对应的毫秒值为：1683525821289</span><br></pre></td></tr></table></figure>
+
+<p>获取到当前时间的毫秒值的意义：我们常常来需要统计某一段代码的执行时间。此时我们就可以在执行这段代码之前获取一次时间，在执行完毕以后再次获取一次系统时间，然后计算两个时间的差值，</p>
+<p>演示exit方法:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">        System.out.println(&quot;程序开始执行.....&quot;);</span><br><span class="line"></span><br><span class="line">        // 终止JVM</span><br><span class="line">        System.exit(0);</span><br><span class="line"></span><br><span class="line">        // 输出</span><br><span class="line">        System.out.println(&quot;程序终止..........&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出为：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">程序开始执行.....</span><br></pre></td></tr></table></figure>
+
+<p>此时可以看到在控制台只输出了”程序开始了…”，由于JVM终止了，因此输出”程序终止了…”这段代码没有被执行。</p>
+<p>演示arraycopy方法:</p>
+<p>方法参数说明：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">// src:    源数组</span><br><span class="line">// srcPos：  源数值的开始位置</span><br><span class="line">// dest：    目标数组</span><br><span class="line">// destPos： 目标数组开始位置</span><br><span class="line">// length:   要复制的元素个数</span><br><span class="line">public static native void arraycopy(Object src,  int  srcPos, Object dest, int destPos, int length); </span><br></pre></td></tr></table></figure>
+
+<p><strong>arraycopy方法底层细节：</strong></p>
+<p>1.如果数据源数组和目的地数组都是基本数据类型，那么两者的类型必须保持一致，否则会报错</p>
+<p>2.在拷贝的时候需要考虑数组的长度，如果超出范围也会报错</p>
+<p>3.如果数据源数组和目的地数组都是引用数据类型，那么子类类型可以赋值给父类类型</p>
+<h1 id="amp-x20-Runtime"><a href="#amp-x20-Runtime" class="headerlink" title="&amp;#x20;Runtime"></a>&amp;#x20;Runtime</h1><h2 id="amp-x20-概述-1"><a href="#amp-x20-概述-1" class="headerlink" title="&amp;#x20;概述"></a>&amp;#x20;概述</h2><p>​	Runtime表示Java中运行时对象，可以获取到程序运行时设计到的一些信息</p>
+<h2 id="amp-x20-常见方法-1"><a href="#amp-x20-常见方法-1" class="headerlink" title="&amp;#x20;常见方法"></a>&amp;#x20;常见方法</h2><p>Object类中的常见方法如下所示：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">public static Runtime getRuntime()    //当前系统的运行环境对象</span><br><span class="line">public void exit(int status)      //停止虚拟机</span><br><span class="line">public int availableProcessors()    //获得CPU的线程数</span><br><span class="line">public long maxMemory()            //JVM能从系统中获取总内存大小（单位byte）</span><br><span class="line">public long totalMemory()        //JVM已经从系统中获取总内存大小（单位byte）</span><br><span class="line">public long freeMemory()        //JVM剩余内存大小（单位byte）</span><br><span class="line">public Process exec(String command)   //运行cmd命令</span><br></pre></td></tr></table></figure>
+
+<h1 id="amp-x20-Object类"><a href="#amp-x20-Object类" class="headerlink" title="&amp;#x20;Object类"></a>&amp;#x20;Object类</h1><h2 id="amp-x20-概述-2"><a href="#amp-x20-概述-2" class="headerlink" title="&amp;#x20;概述"></a>&amp;#x20;概述</h2><blockquote>
+</blockquote>
+<p>查看API文档，我们可以看到API文档中关于Object类的定义如下：</p>
+<p><img src="/2023/05/21/API/image_YSi2xeVCyn.png"></p>
+<p>Object类所在包是java.lang包。Object 是类层次结构的根，每个类都可以将 Object 作为超类。所有类都直接或者间接的继承自该类；换句话说，该类所具备的方法，其他所有类都继承了。</p>
+<p>但是一般情况下我们很少去主动的创建Object类的对象，调用其对应的方法。更多的是创建Object类的某个子类对象，然后通过子类对象调用Object类中的方法。</p>
+<h2 id="amp-x20-常见方法-2"><a href="#amp-x20-常见方法-2" class="headerlink" title="&amp;#x20;常见方法"></a>&amp;#x20;常见方法</h2><p>Object类中的常见方法如下所示：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">public String toString()        //返回该对象的字符串表示形式(可以看做是对象的内存地址值)</span><br><span class="line">public boolean equals(Object obj)    //比较两个对象地址值是否相等；true表示相同，false表示不相同</span><br><span class="line">protected Object clone()          //对象克隆</span><br></pre></td></tr></table></figure>
+
+<p><strong>对象克隆的分类：</strong></p>
+<blockquote>
+<p>深克隆和浅克隆</p>
+</blockquote>
+<p><strong>浅克隆：</strong></p>
+<p><img src="/2023/05/21/API/%E6%B5%85%E5%85%8B%E9%9A%86_smDvzPPVys.png"></p>
+<p>​	不管对象内部的属性是基本数据类型还是引用数据类型，都完全拷贝过来</p>
+<p>​	基本数据类型拷贝过来的是具体的数据，引用数据类型拷贝过来的是地址值。</p>
+<p>​	Object类默认的是浅克隆</p>
+<p><strong>深克隆：</strong></p>
+<p><img src="/2023/05/21/API/%E6%B7%B1%E5%85%8B%E9%9A%86_egXqrjJMsT.png"></p>
+<p>​	基本数据类型拷贝过来，字符串复用，引用数据类型会重新创建新的</p>
+<h1 id="BigInteger类"><a href="#BigInteger类" class="headerlink" title="BigInteger类"></a>BigInteger类</h1><h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><p>​	平时在存储整数的时候，Java中默认是int类型，int类型有取值范围：-2147483648 ~ 2147483647。如果数字过大，我们可以使用long类型，但是如果long类型也表示不下怎么办呢？</p>
+<p>​	就需要用到BigInteger，可以理解为：大的整数。</p>
+<p>​	有多大呢？理论上最大到42亿的21亿次方</p>
+<p>​	基本上在内存撑爆之前，都无法达到这个上限。</p>
+<h2 id="amp-x20-概述-3"><a href="#amp-x20-概述-3" class="headerlink" title="&amp;#x20; 概述"></a>&amp;#x20; 概述</h2><p>API文档中关于BigInteger类的定义如下：</p>
+<p><img src="/2023/05/21/API/image_Ls4QqXjNG3.png"></p>
+<p>BigInteger所在包是在java.math包下，因此在使用的时候就需要进行导包。我们可以使用BigInteger类进行大整数的计算</p>
+<h2 id="amp-x20-常见方法-3"><a href="#amp-x20-常见方法-3" class="headerlink" title="&amp;#x20;常见方法"></a>&amp;#x20;常见方法</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">public BigInteger(int num, Random rnd)     //获取随机大整数，范围：[0 ~ 2的num次方-1]</span><br><span class="line">public BigInteger(String val)         //获取指定的大整数</span><br><span class="line">public BigInteger(String val, int radix)   //获取指定进制的大整数</span><br><span class="line">    </span><br><span class="line">下面这个不是构造，而是一个静态方法获取BigInteger对象</span><br><span class="line">public static BigInteger valueOf(long val)   //静态方法获取BigInteger的对象，内部有优化</span><br></pre></td></tr></table></figure>
+
+<p><strong>构造方法小结：</strong></p>
+<ul>
+<li>如果BigInteger表示的数字没有超出long的范围，可以用静态方法获取。</li>
+<li>如果BigInteger表示的超出long的范围，可以用构造方法获取。</li>
+<li>对象一旦创建，BigInteger内部记录的值不能发生改变。</li>
+<li>只要进行计算都会产生一个新的BigInteger对象</li>
+</ul>
+<h2 id="amp-x20-底层存储方式："><a href="#amp-x20-底层存储方式：" class="headerlink" title="&amp;#x20;底层存储方式："></a>&amp;#x20;底层存储方式：</h2><p>对于计算机而言，其实是没有数据类型的概念的，都是0101010101，数据类型是编程语言自己规定的，所以在实际存储的时候，先把具体的数字变成二进制，每32个bit为一组，存储在数组中。</p>
+<p>数组中最多能存储元素个数：21亿多</p>
+<p>数组中每一位能表示的数字：42亿多</p>
+<p>理论上，BigInteger能表示的最大数字为：42亿的21亿次方。</p>
+<p>但是还没到这个数字，电脑的内存就会撑爆，所以一般认为BigInteger是无限的。</p>
+<p>存储方式如图所示：</p>
+<p><img src="/2023/05/21/API/bigInteger%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86_wqAGYhfmaX.png"></p>
+<h1 id="amp-x20-BigDecimal类"><a href="#amp-x20-BigDecimal类" class="headerlink" title="&amp;#x20;BigDecimal类"></a>&amp;#x20;BigDecimal类</h1><h2 id="amp-x20-概述-4"><a href="#amp-x20-概述-4" class="headerlink" title="&amp;#x20;概述"></a>&amp;#x20;概述</h2><p>API文档中关于BigDecimal类的定义如下：</p>
+<p><img src="/2023/05/21/API/image_mIucs7n9iV.png"></p>
+<p>BigDecimal所在包是在java.math包下，因此在使用的时候就需要进行导包。我们可以使用BigDecimal类进行更加精准的数据计算。</p>
+<p>BigDecimal类中使用最多的还是提供的进行四则运算的方法，如下：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">public BigDecimal add(BigDecimal value)        // 加法运算</span><br><span class="line">public BigDecimal subtract(BigDecimal value)    // 减法运算</span><br><span class="line">public BigDecimal multiply(BigDecimal value)    // 乘法运算</span><br><span class="line">public BigDecimal divide(BigDecimal value)      // 触发运算</span><br></pre></td></tr></table></figure>
+
+<p>示例:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">        // 创建两个BigDecimal对象</span><br><span class="line">        BigDecimal b1 = new BigDecimal(&quot;2.1&quot;) ;</span><br><span class="line">        BigDecimal b2 = new BigDecimal(&quot;0.7&quot;) ;</span><br><span class="line">        System.out.println(b1.add(b2));         // 进行加法运算</span><br><span class="line">        System.out.println(b1.subtract(b2));    // 进行减法运算</span><br><span class="line">        System.out.println(b1.multiply(b2));    // 进行乘法运算</span><br><span class="line">        System.out.println(b1.divide(b2));      // 进行除法运算</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出为：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">2.8</span><br><span class="line">1.4</span><br><span class="line">1.47</span><br><span class="line">3</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>此时我们可以看到使用BigDecimal类来完成浮点数的计算不会存在损失精度的问题。</p>
+<p>除法的特殊情况:</p>
+<p>如果使用BigDecimal类型的数据进行除法运算的时候，得到的结果是一个无限循环小数，那么就会报错：ArithmeticException。 如下代码所示：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">        BigDecimal b1 = new BigDecimal(&quot;1&quot;) ;</span><br><span class="line">        BigDecimal b2 = new BigDecimal(&quot;3&quot;) ;</span><br><span class="line">        System.out.println(b1.divide(b2));</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出为:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Exception in thread &quot;main&quot; java.lang.ArithmeticException: Non-terminating decimal expansion; no exact representable decimal result.</span><br><span class="line">  at java.math.BigDecimal.divide(BigDecimal.java:1690)</span><br><span class="line">  at Main.main(Main.java:11)</span><br></pre></td></tr></table></figure>
+
+<p>针对这个问题怎么解决，此时我们就需要使用到BigDecimal类中另外一个divide方法，如下所示：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">BigDecimal divide(BigDecimal divisor, int scale, int roundingMode)</span><br></pre></td></tr></table></figure>
+
+<p>上述divide方法参数说明：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">divisor:      除数对应的BigDecimal对象；</span><br><span class="line">scale:        精确的位数；</span><br><span class="line">roundingMode:    取舍模式；</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>解决方法为：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">            // 创建两个BigDecimal对象</span><br><span class="line">            BigDecimal b1 = new BigDecimal(&quot;1&quot;) ;</span><br><span class="line">            BigDecimal b2 = new BigDecimal(&quot;3&quot;) ;</span><br><span class="line">            System.out.println(b1.divide(b2 , 2 , RoundingMode.FLOOR));</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出为:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">0.33</span><br></pre></td></tr></table></figure>
+
+<p>小结：后期在进行两个数的除法运算的时候，我们常常使用的是可以设置取舍模式的divide方法。</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>判断与循环</title>
+    <url>/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/</url>
+    <content><![CDATA[<h1 id="判断与循环"><a href="#判断与循环" class="headerlink" title="判断与循环"></a>判断与循环</h1><span id="more"></span>
+
+<h2 id="流程控制语句的分类"><a href="#流程控制语句的分类" class="headerlink" title="流程控制语句的分类"></a>流程控制语句的分类</h2><p>①顺序结构②判断和选择结构 (if,Switch)③循环结构(for,while,do,while)</p>
+<h2 id="顺序结构"><a href="#顺序结构" class="headerlink" title="顺序结构"></a>顺序结构</h2><p>没有特定的语法结构,都是按先后顺序依次执行,大多数代码都是这样的.</p>
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_JMcITj2gBi.png"></p>
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_756jBOc85i.png"></p>
+<h2 id="判断语句"><a href="#判断语句" class="headerlink" title="判断语句"></a>判断语句</h2><h3 id="if语句格式"><a href="#if语句格式" class="headerlink" title="if语句格式:"></a>if语句格式:</h3><p>类型①if (关系表达式) {</p>
+<p>&amp;#x20;    语句体;</p>
+<p>}</p>
+<p>执行流程:先计算表达式的值,如果成立就执行语句体,否则不执行.最后继续执行之后的代码</p>
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_GCHZs1E_xf.png"></p>
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_ZlmBZXXlYr.png"></p>
+<p>注意事项:</p>
+<p>如果要对一个布尔变量进行判断,不要直接写&#x3D;&#x3D;,直接把变量写在小括号里.</p>
+<p>类型② if (关系表达式) {</p>
+<p>语句体1; &amp;#x20;</p>
+<p>} else {</p>
+<p>语句体2; &amp;#x20;</p>
+<p>}</p>
+<p>执行流程:先计算表达式的值,如果成立就执行语句体1,否则执行语句体2.最后继续执行之后的代码</p>
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_cnq4ah8n83.png"></p>
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_FG34CG7l-0.png"></p>
+<p>类型③</p>
+<p>if (关系表达式1) {</p>
+<p>语句体1; &amp;#x20;</p>
+<p>} else if (关系表达式2) {</p>
+<p>语句体2; &amp;#x20;</p>
+<p>}&amp;#x20;</p>
+<p>…</p>
+<p>else {</p>
+<p>语句体n+1;</p>
+<p>}</p>
+<p>执行流程:先计算表达式的值,如果成立就执行语句体1,如果不成立就关系表达式2, 接着如果成立就执行语句体2,如果不成立就关系表达式3,一直循环.最后继续执行之后的代码</p>
+<h2 id="Switch语句"><a href="#Switch语句" class="headerlink" title="Switch语句"></a>Switch语句</h2><h3 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">switch (表达式) &#123;</span><br><span class="line">  case 1:</span><br><span class="line">    语句体1;</span><br><span class="line">    break;</span><br><span class="line">  case 2:</span><br><span class="line">    语句体2;</span><br><span class="line">    break;</span><br><span class="line">  ...</span><br><span class="line">  default:</span><br><span class="line">    语句体n+1;</span><br><span class="line">    break;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>执行流程:先计算表达式的值,然后和case依次比较,如果有对应的值就会执行相应的语句,如果在执行过程中遇到break就会结束.最后如果都不匹配就会执行default语句然后结束程序.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Scanner sc = new Scanner(System.in);</span><br><span class="line">        System.out.println(&quot;请输入一个整数表示星期&quot;);</span><br><span class="line">        int week = sc.nextInt();</span><br><span class="line">        switch (week)&#123;</span><br><span class="line">            case 1:</span><br><span class="line">                System.out.println(&quot;跑步&quot;);</span><br><span class="line">                break;</span><br><span class="line">            case 2:</span><br><span class="line">                System.out.println(&quot;游泳&quot;);</span><br><span class="line">                break;</span><br><span class="line">            case 3:</span><br><span class="line">                System.out.println(&quot;慢走&quot;);</span><br><span class="line">                break;</span><br><span class="line">            case 4:</span><br><span class="line">                System.out.println(&quot;动感单车&quot;);</span><br><span class="line">                break;</span><br><span class="line">            case 5:</span><br><span class="line">                System.out.println(&quot;拳击&quot;);</span><br><span class="line">                break;</span><br><span class="line">            case 6:</span><br><span class="line">                System.out.println(&quot;爬山&quot;);</span><br><span class="line">                break;</span><br><span class="line">            case 7:</span><br><span class="line">                System.out.println(&quot;好好吃一顿&quot;);</span><br><span class="line">                break;</span><br><span class="line">            default:</span><br><span class="line">                System.out.println(&quot;输入错误，没有这个星期&quot;);</span><br><span class="line">                break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_tt5pVjbl3C.png"></p>
+<p>注:1.default可以放在任意位置也可以省略不写.</p>
+<p>不写break会引发case穿透现象</p>
+<h3 id="Switch和if的使用场景"><a href="#Switch和if的使用场景" class="headerlink" title="Switch和if的使用场景"></a>Switch和if的使用场景</h3><p>当我们需要对一个范围进行判断的时候，用if的第三种格式</p>
+<p>当我们把有限个数据列举出来，选择其中一个执行的时候，用switch语句</p>
+<p>比如：</p>
+<p>①小明的考试成绩，如果用switch，那么需要写100个case，太麻烦了，所以用if简单。</p>
+<p>②如果是星期，月份，客服电话中0~9的功能选择就可以用switch</p>
+<h2 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h2><h3 id="for的循环结构"><a href="#for的循环结构" class="headerlink" title="for的循环结构"></a>for的循环结构</h3><p>在满足循环条件的情况下,反复执行一段代码,当反复执行这一段代码时应在适当时刻将判断条件改为false,将此循环结束,否则循环会一直下去成为死循环.</p>
+<p>格式</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for (初始化语句;条件判断语句;条件控制语句) &#123;</span><br><span class="line">  循环体语句;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>格式解释：</strong></p>
+<p>初始化语句： 用于表示循环开启时的起始状态，简单说就是循环开始的时候什么样</p>
+<p>条件判断语句：用于表示循环反复执行的条件，简单说就是判断循环是否能一直执行下去</p>
+<p>条件控制语句：用于表示循环执行中每次变化的内容，简单说就是控制循环是否能执行下去</p>
+<p>循环体语句： 用于表示循环反复执行的内容，简单说就是循环    反复执行的事情</p>
+<p>执行流程:先执行初始化语句,执行条件判断语句，看其结果是true还是false,如果是false，循环结束,如果是true，继续执行,执行循环体语句,执行条件控制语句,再执行条件判断语句…..一直循环.</p>
+<p>for循环书写的技巧</p>
+<p>①确定循环的条件</p>
+<p>②确定循环的结束条件</p>
+<p>③确定循环需要重复执行的代码</p>
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_46EXNlSuAa.png"></p>
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_-kyFe9WXed.png"></p>
+<h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3><p>格式</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">初始化语句;</span><br><span class="line">while(条件判断语句)&#123;</span><br><span class="line">  循环体;</span><br><span class="line">  条件控制语句;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_S3q7dKexR0.png"></p>
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_uHCgZtnQZ7.png"></p>
+<h3 id="do…while循环"><a href="#do…while循环" class="headerlink" title="do…while循环"></a>do…while循环</h3><p>格式：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">初始化语句;</span><br><span class="line">do&#123;</span><br><span class="line">    循环体;</span><br><span class="line">    条件控制语句;</span><br><span class="line">&#125;while(条件判断语句);</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_E3V5Tg7jAi.png"></p>
+<p><img src="/2023/05/21/%E5%88%A4%E6%96%AD%E4%B8%8E%E5%BE%AA%E7%8E%AF/image_UXu39Nn2Ni.png"></p>
+<p>三种格式的区别:</p>
+<ul>
+<li>for和while循环，是先判断，再执行。</li>
+<li>do…while是先执行，再判断。</li>
+<li>当知道循环次数或者循环范围的时候，用for循环。</li>
+<li>当不知道循环次数，也不知道循环范围，但是知道循环的结束条件时，用while循环。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>字符串</title>
+    <url>/2023/05/21/%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+    <content><![CDATA[<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><span id="more"></span>
+
+<h4 id="API"><a href="#API" class="headerlink" title="API"></a>API</h4><p>1.什么是API</p>
+<p>API (Application Programming Interface) ：应用程序编程接口</p>
+<p>&amp;#x20;  2.java中的API&amp;#x20;</p>
+<p>指的就是 JDK 中提供的各种功能的 Java类，这些类将底层的实现封装了起来.</p>
+<h4 id="string类"><a href="#string类" class="headerlink" title="string类"></a>string类</h4><p>1.概述:String 类代表字符串，Java 程序中的所有字符串文字（例如“abc”）都被实现为此类的实例。也就是说，Java 程序中所有的双引号字符串，都是 String 类的对象。String 类在 java.lang 包下，所以使用的时候不需要导包！</p>
+<p>&amp;#x20;    2.特点:</p>
+<ol>
+<li>字符串不可变，它们的值在创建后不能被更改</li>
+<li>虽然 String 的值是不可变的，但是它们可以被共享</li>
+<li>字符串效果上相当于字符数组( char[] )，但是底层原理是字节数组( byte[] )</li>
+</ol>
+<p>3.构造方法</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>String s &#x3D; “abc”;</td>
+<td>直接赋值的方式创建字符串对象，内容就是abc</td>
+</tr>
+<tr>
+<td>public String()</td>
+<td>创建一个空白字符串对象，不含有任何内容</td>
+</tr>
+<tr>
+<td>public String(char[] chs)</td>
+<td>根据字符数组的内容，来创建字符串对象</td>
+</tr>
+<tr>
+<td>public String(byte[] bys)</td>
+<td>根据字节数组的内容，来创建字符串对象</td>
+</tr>
+</tbody></table>
+<p>示例代码:</p>
+<p>1.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//String s = “abc”;  直接赋值的方式创建字符串对象，内容就是abc</span><br><span class="line">        String s1 = &quot;abc&quot;;</span><br><span class="line">        System.out.println(&quot;s1:&quot; + s1);</span><br></pre></td></tr></table></figure>
+
+<p>2.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//public String()：创建一个空白字符串对象，不含有任何内容</span><br><span class="line">       String s2 = new String();</span><br><span class="line">       System.out.println(&quot;s2:&quot; + s2);</span><br></pre></td></tr></table></figure>
+
+<p>3.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//public String(char[] chs)：根据字符数组的内容，来创建字符串对象</span><br><span class="line">       char[] chs = &#123;&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;&#125;;</span><br><span class="line">       String s3 = new String(chs);</span><br><span class="line">       System.out.println(&quot;s3:&quot; + s3);</span><br></pre></td></tr></table></figure>
+
+<p>4.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//public String(byte[] bys)：根据字节数组的内容，来创建字符串对象</span><br><span class="line">        byte[] bys = &#123;97, 98, 99&#125;;</span><br><span class="line">        String s4 = new String(bys);</span><br><span class="line">        System.out.println(&quot;s4:&quot; + s4);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>创建字符串对象的两种方式的区别:</p>
+<ol>
+<li><p>通过构造方法创建</p>
+<p>通过 new 创建的字符串对象，每一次 new 都会申请一个内存空间，虽然内容相同，但是地址值不同</p>
+</li>
+<li><p>直接赋值方式创建</p>
+<p>以“”方式给出的字符串，只要字符序列相同(顺序和大小写)，无论在程序代码中出现几次，JVM 都只会建立一个 String 对象，并在字符串池中维护</p>
+</li>
+</ol>
+<h3 id="字符串的比较"><a href="#字符串的比较" class="headerlink" title="字符串的比较"></a>字符串的比较</h3><p>1.&#x3D;&#x3D;的作用</p>
+<ul>
+<li>比较基本数据类型：比较的是具体的值</li>
+<li>比较引用数据类型：比较的是对象地址值</li>
+</ul>
+<p>2.equals方法的作用</p>
+<p>基本代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public boolean equals(String s)     </span><br><span class="line">比较两个字符串内容是否相同、区分大小写</span><br></pre></td></tr></table></figure>
+
+<p>示例:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">  public static void main(String[] args) &#123;</span><br><span class="line">        char[] chs = &#123;&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;&#125;;</span><br><span class="line">        String s1 = new String(chs);</span><br><span class="line">        String s2 = new String(chs);</span><br><span class="line">        String s3 = &quot;abc&quot;;</span><br><span class="line">        String s4 = &quot;abc&quot;;</span><br><span class="line">        //比较字符串对象地址是否相同</span><br><span class="line">        System.out.println(s1 == s2);</span><br><span class="line">        System.out.println(s1 == s3);</span><br><span class="line">        System.out.println(s3 == s4);</span><br><span class="line">        System.out.println(&quot;--------&quot;);</span><br><span class="line">        //比较字符串内容是否相同</span><br><span class="line">        System.out.println(s1.equals(s2));</span><br><span class="line">        System.out.println(s1.equals(s3));</span><br><span class="line">        System.out.println(s3.equals(s4));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E5%AD%97%E7%AC%A6%E4%B8%B2/image_k9F_suWkdV.png"></p>
+<h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><p>用户登录:代码示例</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">       String rightUsername = &quot;qwer&quot;;</span><br><span class="line">       String rightPassword = &quot;1234&quot;;</span><br><span class="line">       for (int i = 0; i &lt; 3; i++) &#123;//0 1 2</span><br><span class="line">           Scanner sc = new Scanner(System.in);</span><br><span class="line">           System.out.println(&quot;请输入用户名&quot;);</span><br><span class="line">           String username = sc.next();</span><br><span class="line">           System.out.println(&quot;请输入密码&quot;);</span><br><span class="line">           String password = sc.next();</span><br><span class="line">           //判断比较</span><br><span class="line">           if (username.equals(rightUsername) &amp;&amp; password.equals(rightPassword)) &#123;</span><br><span class="line">               System.out.println(&quot;登录成功&quot;);</span><br><span class="line">               break;</span><br><span class="line">           &#125; else &#123;</span><br><span class="line">               if(i == 2)&#123;</span><br><span class="line">                   System.out.println(&quot;账户&quot; + username + &quot;被锁定&quot;);</span><br><span class="line">               &#125;else&#123;</span><br><span class="line">                   //不是最后一次机会</span><br><span class="line">                   System.out.println(&quot;用户名或密码错误，登录失败,还剩下&quot; + (2 - i) + &quot;次机会&quot;);//2 1 0</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E5%AD%97%E7%AC%A6%E4%B8%B2/image_8YBSvlKGN-.png"></p>
+<h2 id="StringBuilder"><a href="#StringBuilder" class="headerlink" title="StringBuilder"></a>StringBuilder</h2><p>StringBuilder 可以看成是一个容器，创建之后里面的内容是可变的。</p>
+<p>当我们在拼接字符串和反转字符串的时候会使用到</p>
+<p>示例:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">        StringBuilder sc = new StringBuilder(&quot;abc&quot;);</span><br><span class="line">        sb.reverse();</span><br><span class="line">        int len = sb.length();</span><br><span class="line">        System.out.println(len);</span><br><span class="line">        System.out.println(sc);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h2><h3 id="集合和数组的优势对比："><a href="#集合和数组的优势对比：" class="headerlink" title="集合和数组的优势对比："></a>集合和数组的优势对比：</h3><ol>
+<li>长度可变</li>
+<li>添加数据的时候不需要考虑索引，默认将数据添加到末尾</li>
+</ol>
+<h3 id="ArrayList类概述"><a href="#ArrayList类概述" class="headerlink" title="ArrayList类概述"></a>ArrayList类概述</h3><ul>
+<li><p>什么是集合</p>
+<p>提供一种存储空间可变的存储模型，存储的数据容量可以发生改变</p>
+</li>
+<li><p>ArrayList集合的特点</p>
+<p>长度可以变化，只能存储引用数据类型。</p>
+</li>
+<li><p>泛型的使用</p>
+<p>用于约束集合中存储元素的数据类型</p>
+</li>
+</ul>
+<h4 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h4><table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public ArrayList()</td>
+<td>创建一个空的集合对象</td>
+</tr>
+</tbody></table>
+<h4 id="1-2-2-成员方法"><a href="#1-2-2-成员方法" class="headerlink" title="1.2.2 成员方法"></a>1.2.2 成员方法</h4><table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public boolean add(要添加的元素)</td>
+<td>将指定的元素追加到此集合的末尾</td>
+</tr>
+<tr>
+<td>public boolean remove(要删除的元素)</td>
+<td>删除指定元素,返回值表示是否删除成功</td>
+</tr>
+<tr>
+<td>public E remove(int index)</td>
+<td>删除指定索引处的元素，返回被删除的元素</td>
+</tr>
+<tr>
+<td>public E set(int index,E element)</td>
+<td>修改指定索引处的元素，返回被修改的元素</td>
+</tr>
+<tr>
+<td>public E get(int index)</td>
+<td>返回指定索引处的元素</td>
+</tr>
+<tr>
+<td>public int size()</td>
+<td>返回集合中的元素的个数</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>数组</title>
+    <url>/2023/05/21/%E6%95%B0%E7%BB%84/</url>
+    <content><![CDATA[<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><span id="more"></span>
+
+<h3 id="概念"><a href="#概念" class="headerlink" title="概念:"></a>概念:</h3><p>指的是一种容器，可以同来存储同种数据类型的多个值。</p>
+<p>但是数组容器在存储数据的时候，还需要结合隐式转换考虑。</p>
+<p>比如：</p>
+<p>定义了一个int类型的数组。那么boolean。double类型的数据是不能存到这个数组中的，</p>
+<p>但是byte类型，short类型，int类型的数据是可以存到这个数组里面的。</p>
+<p>建议：</p>
+<p>容器的类，和存储的数据类型保持一致。</p>
+<p>举例：</p>
+<p>整数1 2 3 4 56 就可以使用int类型的数组来存储。</p>
+<p>小数1.1 1.2 1.3 1.4 就可以使用double类型的数组来存储。</p>
+<p>字符串”aaa” “bbb” “ccc” 就可以使用String类型的数组来存储。</p>
+<h2 id="数组的定义"><a href="#数组的定义" class="headerlink" title="数组的定义"></a>数组的定义</h2><p>格式一:数据类型 [] 数组名</p>
+<p>例: int [] array</p>
+<p>格式二:数据类型  数组名 []</p>
+<p>例: int array []</p>
+<p>方括号和数组名谁前谁后都一样.</p>
+<h3 id="数组的静态初始化"><a href="#数组的静态初始化" class="headerlink" title="数组的静态初始化"></a>数组的静态初始化</h3><p>代码格式:</p>
+<p>数据类型[] 数组名 &#x3D; new 数据类型[]{元素1，元素2，元素3…};</p>
+<p>例:int[] array &#x3D; new int[]{1,2,3…};</p>
+<p>&amp;#x20;   int[] array &#x3D; {1,2,3…};   &amp;#x20;</p>
+<h4 id="格式解释"><a href="#格式解释" class="headerlink" title="格式解释:"></a>格式解释:</h4><p>数据类型：限定了数组以后能存什么类型的数据。</p>
+<p>&amp;#x20; 前面和后面的数据类型一定要保持一致。</p>
+<p>方括号：表示现在定义的是一个数组。</p>
+<p>数组名：是一个名字，方便以后使用。</p>
+<p>大括号：表示数组里面的元素。元素也就是存入到数组中的数据。</p>
+<p>&amp;#x20;  多个元素之间，一定要用逗号隔开。</p>
+<p>注意点:</p>
+<p>①等号前后的数据类型必须保持一致。</p>
+<p>②数组一旦创建之后，长度不能发生变化。</p>
+<h2 id="地址值"><a href="#地址值" class="headerlink" title="地址值"></a>地址值</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int[] arr = &#123;1,2,3,4,5&#125;;</span><br><span class="line">System.out.println(arr);</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E6%95%B0%E7%BB%84/image_SUXbiDwVrV.png"></p>
+<p>打印数组的时候，实际出现的是数组的地址值。</p>
+<p>数组的地址值：就表示数组在内存中的位置。</p>
+<p>比如:</p>
+<p>[: 表示现在打印的是一个数组.</p>
+<p>I: 表示答应的数据类型是int类型.</p>
+<p>@: 是一个间隔符号.</p>
+<p>1540e19d: 表示是数组在内存中真正的地址值.(十六进制)</p>
+<p>∴ [I@1540e19d 就是数组的地址值</p>
+<h2 id="数组元素的访问"><a href="#数组元素的访问" class="headerlink" title="数组元素的访问"></a>数组元素的访问</h2><p>代码格式:数组名[索引]</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int[] arr = &#123;1, 2, 3, 4, 5, 6&#125;;</span><br><span class="line">        int number=arr [3];</span><br><span class="line">        System.out.println(number);</span><br><span class="line">        System.out.println(arr[2]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E6%95%B0%E7%BB%84/image_mVUBq1O36h.png"></p>
+<p>作用:①获取数组中对应索引上的值</p>
+<p>&amp;#x20;       ②修改数组中对应索引上的值</p>
+<p>&amp;#x20;   一旦修改之后，原来的值就会被覆盖了。</p>
+<p>索引的特点:</p>
+<ol>
+<li>一定是从0 开始的</li>
+<li>连续不间断</li>
+<li>逐个+1增长</li>
+</ol>
+<h4 id="数据的存储"><a href="#数据的存储" class="headerlink" title="数据的存储"></a>数据的存储</h4><p>代码格式:数组名[索引]&#x3D;具体数据&#x2F;变量</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int[] arr = &#123;1, 2, 3, 4, 5&#125;;</span><br><span class="line">        arr[1]= 10;</span><br><span class="line">        System.out.println(arr[1]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E6%95%B0%E7%BB%84/image_-g4cTMwhlB.png"></p>
+<h3 id="数组的遍历"><a href="#数组的遍历" class="headerlink" title="数组的遍历"></a>数组的遍历</h3><p>遍历：就是把数组里面所有的内容一个一个全部取出来。</p>
+<p>代码格式:数组名.length;</p>
+<p>代码:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int[] arr = &#123;1,2,3,4,5&#125;;</span><br><span class="line">        for (int i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">            System.out.println(arr[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E6%95%B0%E7%BB%84/image_7wjTKS8HvI.png"></p>
+<p>扩展:</p>
+<p>自动的快速生成数组的遍历方式</p>
+<p>数组名.fori</p>
+<h3 id="求和练习"><a href="#求和练习" class="headerlink" title="求和练习:"></a>求和练习:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> int[] arr = &#123;1, 2, 4, 4, 5, 6&#125;;</span><br><span class="line">        int sum = 0;</span><br><span class="line">        for (int i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">            sum = sum + arr[i];</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(sum);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E6%95%B0%E7%BB%84/image_kd0O1WSVxO.png"></p>
+<p>统计个数:统计数组里有几个数可以被5 整除</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int[] arr = &#123;1, 2, 5, 4, 5, 6, 7, 8, 9, 10&#125;;</span><br><span class="line">        int count = 0;</span><br><span class="line">        for (int i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">            if (arr[i] % 5 == 0) &#123;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(&quot;数组中能被5整除的数字有&quot; + count + &quot;个&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E6%95%B0%E7%BB%84/image_4H1PqZXF7y.png"></p>
+<h3 id="数据变化-amp-x20"><a href="#数据变化-amp-x20" class="headerlink" title="数据变化&amp;#x20;"></a>数据变化&amp;#x20;</h3><p>1.如果是奇数，则将当前数字扩大两倍</p>
+<p>2.如果是偶数，则将当前数字变成二分之一</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int[] arr = &#123;1, 2, 3, 4, 5, 6, 7, 8, 9, 10&#125;;</span><br><span class="line">        for (int i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">            if (arr[i] % 2 == 0) &#123;</span><br><span class="line">                arr[i] = arr[i] / 2;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                arr[i] = arr[i] * 2;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        for (int i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">            System.out.println(arr[i]);</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E6%95%B0%E7%BB%84/image_JF8dtATwQk.png"></p>
+<h3 id="数组的动态初始化"><a href="#数组的动态初始化" class="headerlink" title="数组的动态初始化"></a>数组的动态初始化</h3><p>代码格式:数据类型[] 数组名 &#x3D; new 数据类型[数组的长度];</p>
+<h3 id="数组的默认初始化值："><a href="#数组的默认初始化值：" class="headerlink" title="数组的默认初始化值："></a>数组的默认初始化值：</h3><p>整数类型：0</p>
+<p>小数类型：0.0</p>
+<p>布尔类型：false</p>
+<p>字符类型：’\u0000’</p>
+<p>引用类型：null</p>
+<h3 id="数组两种初始化方式的区别"><a href="#数组两种初始化方式的区别" class="headerlink" title="数组两种初始化方式的区别"></a>数组两种初始化方式的区别</h3><p>静态初始化：int[] arr &#x3D; {1,2,3,4,5};</p>
+<p>动态初始化：int[] arr &#x3D; new int[3];</p>
+<p>静态初始化：手动指定数组的元素，系统会根据元素的个数，计算出数组的长度。</p>
+<p>动态初始化：手动指定数组长度，由系统给出默认初始化值。</p>
+<h4 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景:"></a>使用场景:</h4><p>只明确元素个数，但是不明确具体的数据，使用动态初始化。</p>
+<p>已经明确了要操作的所有数据，使用静态初始化。</p>
+<h3 id="数组的内存图"><a href="#数组的内存图" class="headerlink" title="数组的内存图"></a>数组的内存图</h3><p>1.JAVA内存分配:</p>
+<p>栈:方法运行时使用的内存，比如main方法运行，进入方法栈中执行</p>
+<p>堆:存储对象或者数组，new来创建的，都存储在堆内存</p>
+<p>方法区:存储可以运行的class文件</p>
+<p>本地方法栈:JVM在使用操作系统功能的时候使用，和我们开发无关</p>
+<p>寄存器:给CPU使用，和我们开发无关</p>
+<p><img src="/2023/05/21/%E6%95%B0%E7%BB%84/image_leNWGc5jBO.png"></p>
+<p><img src="/2023/05/21/%E6%95%B0%E7%BB%84/image_GfmHXfuyjr.png"></p>
+<p>注:只要是new出来的一定是在堆里开辟了一个小空间</p>
+<p>如果new了多次,那么在堆里有多个小空间,每个小空间有各自的数据.</p>
+<p><img src="/2023/05/21/%E6%95%B0%E7%BB%84/image_C9MF1qsc4_.png"></p>
+<p>注:</p>
+<p>当两个数组指向同一个小空间时，其中一个数组对小空间中的值发生了改变，那么其他数组再次访问的时候都是修改之后的结果了。</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>循环高级</title>
+    <url>/2023/05/21/%E5%BE%AA%E7%8E%AF%E9%AB%98%E7%BA%A7/</url>
+    <content><![CDATA[<h1 id="循环高级"><a href="#循环高级" class="headerlink" title="循环高级"></a>循环高级</h1><span id="more"></span>
+
+
+<h3 id="1-无限循环"><a href="#1-无限循环" class="headerlink" title="1.无限循环"></a>1.无限循环</h3><p>for格式</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for(;;)&#123;</span><br><span class="line">    System.out.println(&quot;循环执行一直在打印内容&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注:</p>
+<p>初始化语句可以空着不写，表示循环之前不定义任何的控制变量。</p>
+<p>条件判断语句可以空着不写，如果不写，默认表示true，循环一直进行。</p>
+<p>条件控制语句可以空着不写，表示每次循环体执行完毕后，控制变量不做任何变化。</p>
+<p>while格式</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">while(true)&#123;</span><br><span class="line">    System.out.println(&quot;循环执行一直在打印内容&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注:小括号里的true不能省略，true一定要写出来，否则代码会报错。</p>
+<p>do…..while格式</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">do&#123;</span><br><span class="line">    System.out.println(&quot;循环执行一直在打印内容&quot;);</span><br><span class="line">&#125;while(true);</span><br></pre></td></tr></table></figure>
+
+<p>注:小括号里的true不能省略，true一定要写出来，否则代码会报错。</p>
+<h3 id="无限循环的注意事项："><a href="#无限循环的注意事项：" class="headerlink" title="无限循环的注意事项："></a>无限循环的注意事项：</h3><p>①最为常用的格式：while</p>
+<p>②无限循环下面不能再写其他代码了，因为永远执行不到。</p>
+<h3 id="2-条件控制语句"><a href="#2-条件控制语句" class="headerlink" title="2.条件控制语句"></a>2.条件控制语句</h3><p>break:</p>
+<p>不能单独存在的。可以用在switch和循环中，表示结束，跳出的意思。</p>
+<p>continue:</p>
+<p>不能单独存在的。只能存在于循环当中。</p>
+<p>表示：跳过本次循环，继续执行下次循环。</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>方法</title>
+    <url>/2023/05/21/%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><span id="more"></span>
+
+<h3 id="方法的概念"><a href="#方法的概念" class="headerlink" title="方法的概念:"></a>方法的概念:</h3><p>方法（method）是程序中最小的执行单元</p>
+<p>①方法必须先创建才可以使用，该过程成为方法定义</p>
+<p>②方法创建后并不是直接可以运行的，需要手动使用后，才执行，该过程成为方法调用</p>
+<h2 id="方法的定义和调用"><a href="#方法的定义和调用" class="headerlink" title="方法的定义和调用"></a>方法的定义和调用</h2><h4 id="无参数方法定义和调用"><a href="#无参数方法定义和调用" class="headerlink" title="无参数方法定义和调用"></a>无参数方法定义和调用</h4><p>代码格式：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static void 方法名 (   ) &#123;</span><br><span class="line">     方法体;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>调用格式：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">方法名();</span><br></pre></td></tr></table></figure>
+
+<p>示例:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        playGame();</span><br><span class="line">    &#125;</span><br><span class="line">   public static void playGame()&#123;</span><br><span class="line">       System.out.println(&quot;开始&quot;);</span><br><span class="line">       System.out.println(&quot;选择&quot;);</span><br><span class="line">       System.out.println(&quot;退出&quot;);</span><br><span class="line">   &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E6%96%B9%E6%B3%95/image_s3L9PsXvzE.png"></p>
+<p>注意:方法必须先定义，后调用，否则程序将报错</p>
+<h4 id="无参数方法"><a href="#无参数方法" class="headerlink" title="无参数方法:"></a>无参数方法:</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">       getMax();</span><br><span class="line">   &#125;</span><br><span class="line">  public static void getMax()&#123;</span><br><span class="line">       int a=10;</span><br><span class="line">       int b=20;</span><br><span class="line">       if (a&gt;b)&#123;</span><br><span class="line">           System.out.println(a);</span><br><span class="line">       &#125;else&#123;</span><br><span class="line">           System.out.println(b);</span><br><span class="line">       &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E6%96%B9%E6%B3%95/image_OznKz_55O5.png"></p>
+<h3 id="带参数方法定义和调用"><a href="#带参数方法定义和调用" class="headerlink" title="带参数方法定义和调用"></a>带参数方法定义和调用</h3><p>代码格式:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static void 方法名 (参数1) &#123;</span><br><span class="line">  方法体;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public static void 方法名 (参数1, 参数2, 参数3...) &#123;</span><br><span class="line">  方法体;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>调用格式：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">方法名(参数)；</span><br><span class="line"></span><br><span class="line">方法名(参数1,参数2);</span><br></pre></td></tr></table></figure>
+
+<p>示例:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">       getSum(10,20);</span><br><span class="line">   &#125;</span><br><span class="line">  public static void getSum(int num1,int num2)&#123;</span><br><span class="line">     int result=num1+num2;</span><br><span class="line">      System.out.println(result);</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E6%96%B9%E6%B3%95/image_Ud5uochMXE.png"></p>
+<p>注意:①方法调用时，参数的数量与类型必须与方法定义中的设置相匹配，否则程序将报错&amp;#x20;</p>
+<p>②方法定义时，多个参数之间使用逗号( ，)分隔</p>
+<p>③方法定义时，参数中的数据类型与变量名都不能缺少，缺少任意一个程序将报错</p>
+<h3 id="形参和实参"><a href="#形参和实参" class="headerlink" title="形参和实参"></a>形参和实参</h3><ol>
+<li>形参：全称形式参数.指方法定义中的参数</li>
+<li>实参：全称实际参数.方法调用中的参数&amp;#x20;</li>
+</ol>
+<p>&amp;#x20;     &amp;#x20;</p>
+<h4 id="带参数方法"><a href="#带参数方法" class="headerlink" title="带参数方法"></a>带参数方法</h4><p>示例:设计一个方法用于打印两个数中的较大数</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">       getMax(10,20);</span><br><span class="line">   &#125;</span><br><span class="line">  public static void getMax(int a,int b)&#123;</span><br><span class="line">       if (a&gt;b)&#123;</span><br><span class="line">           System.out.println(a);</span><br><span class="line">       &#125;else&#123;</span><br><span class="line">           System.out.println(b);</span><br><span class="line">       &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E6%96%B9%E6%B3%95/image_y7O1QwzBSQ.png"></p>
+<h3 id="带返回值方法定义和调用"><a href="#带返回值方法定义和调用" class="headerlink" title="带返回值方法定义和调用"></a>带返回值方法定义和调用</h3><p>代码格式:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static 数据类型 方法名 ( 参数 ) &#123; </span><br><span class="line">  return 数据 ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>调用格式:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">方法名 ( 参数 ) ;</span><br><span class="line">数据类型 变量名 = 方法名 ( 参数 ) ;</span><br></pre></td></tr></table></figure>
+
+<p>示例:求商行全年营业额</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">        int sum1 = getSum(10, 20, 30);</span><br><span class="line">        int sum2 = getSum(20, 30, 40);</span><br><span class="line">        int sum3 = getSum(50, 60, 70);</span><br><span class="line">        int sum4 = getSum(60, 50, 40);</span><br><span class="line">        int sum = sum1 + sum2 + sum3 + sum4;</span><br><span class="line">        System.out.println(sum);</span><br><span class="line">    &#125;</span><br><span class="line">    public static int getSum(int month1,int month2,int month3)&#123;</span><br><span class="line">        int sum = month1 + month2 + month3;</span><br><span class="line">        return sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E6%96%B9%E6%B3%95/image_9TUz8JJAK9.png"></p>
+<h3 id="方法的注意事项"><a href="#方法的注意事项" class="headerlink" title="方法的注意事项:"></a>方法的注意事项:</h3><p>方法不能嵌套定义</p>
+<p>void表示无返回值，可以省略return，也可以单独的书写return，后面不加数据,return语句后面不能跟数据或代码</p>
+<h4 id="方法的通用格式"><a href="#方法的通用格式" class="headerlink" title="方法的通用格式:"></a>方法的通用格式:</h4><p>代码格式</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static 返回值类型 方法名(参数) &#123;</span><br><span class="line">   方法体; </span><br><span class="line">   return 数据 ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>代码解释:</p>
+<p>public static 	修饰符</p>
+<p>返回值类型 方法操作完毕之后返回的数据的数据类型</p>
+<p>方法名 调用方法时候使用的标识</p>
+<p>参数 由数据类型和变量名组成，多个参数之间用逗号隔开</p>
+<p>方法体 完成功能的代码块</p>
+<p>return 如果方法操作完毕，有数据返回，用于把数据返回给调用者</p>
+<p>注意:方法操作完毕之后是否有数据返回，如果没有，写void；如果有，写对应的数据类型</p>
+<h3 id="方法重载"><a href="#方法重载" class="headerlink" title="方法重载"></a>方法重载</h3><p>方法重载指同一个类中定义的多个方法之间的关系，满足下列条件的多个方法相互构成重载</p>
+<ol>
+<li>多个方法在同一个类中</li>
+<li>多个方法具有相同的方法名</li>
+<li>多个方法的参数不相同，类型不同或者数量不同</li>
+</ol>
+<p>注意:</p>
+<ol>
+<li>重载仅对应方法的定义，与方法的调用无关，调用方式参照标准格式</li>
+<li>重载仅针对同一个类中方法的名称与参数进行识别，与返回值无关，换句话说不能通过返回值来判定两个方法是否相互构成重载</li>
+</ol>
+<p>代码格式:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class MethodDemo &#123;</span><br><span class="line">  public static void fn(int a) &#123;</span><br><span class="line">      //方法体</span><br><span class="line">    &#125;</span><br><span class="line">    public static int fn(double a) &#123;</span><br><span class="line">      //方法体</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class MethodDemo &#123;</span><br><span class="line">  public static float fn(int a) &#123;</span><br><span class="line">      //方法体</span><br><span class="line">    &#125;</span><br><span class="line">    public static int fn(int a , int b) &#123;</span><br><span class="line">      //方法体</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="方法的基本内存原理"><a href="#方法的基本内存原理" class="headerlink" title="方法的基本内存原理"></a>方法的基本内存原理</h3><p>方法传递的基本数据类型的内存原理(用自己的)</p>
+<p><img src="/2023/05/21/%E6%96%B9%E6%B3%95/image_oyQs_TVpzp.png"></p>
+<p>方法传递引用数据类型的内存原理(拿别人得去用)</p>
+<p><img src="/2023/05/21/%E6%96%B9%E6%B3%95/image_VmRmQCTwGs.png"></p>
+<p><img src="/2023/05/21/%E6%96%B9%E6%B3%95/image_i6MWKF7VWd.png"></p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>面向对象进阶</title>
+    <url>/2023/05/21/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/</url>
+    <content><![CDATA[<h1 id="面向对象进阶"><a href="#面向对象进阶" class="headerlink" title="面向对象进阶"></a>面向对象进阶</h1><span id="more"></span>
+
+
+<h1 id="static关键字-amp-x20"><a href="#static关键字-amp-x20" class="headerlink" title="static关键字  &amp;#x20;"></a>static关键字  &amp;#x20;</h1><p>Java中成员（<strong>变量和方法</strong>）等是存在所属性的，Java是通过static关键字来区分的。<strong>static关键字在Java开发非常的重要，对于理解面向对象非常关键。</strong></p>
+<p>关于 static 关键字的使用，它可以用来修饰的成员变量和成员方法，被static修饰的成员是<strong>属于类</strong>的是放在静态区中，没有static修饰的成员变量和方法则是<strong>属于对象</strong>的。上面案例中的成员变量都是没有static修饰的，所以属于每个对象。</p>
+<h2 id="amp-x20-定义格式和使用-amp-x20"><a href="#amp-x20-定义格式和使用-amp-x20" class="headerlink" title="&amp;#x20;定义格式和使用&amp;#x20;"></a>&amp;#x20;定义格式和使用&amp;#x20;</h2><p>static是静态的意思。 static可以修饰成员变量或者修饰方法。</p>
+<h3 id="amp-x20-静态变量及其访问"><a href="#amp-x20-静态变量及其访问" class="headerlink" title="&amp;#x20;静态变量及其访问"></a>&amp;#x20;静态变量及其访问</h3><p>有static修饰成员变量，说明这个成员变量是属于类的，这个成员变量称为<strong>类变量</strong>或者<strong>静态成员变量</strong>。 直接用  类名访问即可。因为类只有一个，所以静态成员变量在内存区域中也只存在一份。所有的对象都可以共享这个变量。</p>
+<p><strong>定义格式</strong></p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">修饰符 static 数据类型 变量名 = 初始值；    </span><br></pre></td></tr></table></figure>
+
+<p>示例</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">public class Student &#123;</span><br><span class="line">    public static String schoolName = &quot;1234&quot;； // 属于类，只有一份。</span><br><span class="line">    // .....</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>静态成员变量的访问:</strong></p>
+<p><strong>格式：类名.静态变量</strong></p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">public static void  main(String[] args)&#123;</span><br><span class="line">    System.out.println(Student.schoolName);</span><br><span class="line">    Student.schoolName = &quot;1234&quot;;</span><br><span class="line">    System.out.println(Student.schoolName);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="实例变量及其访问"><a href="#实例变量及其访问" class="headerlink" title="实例变量及其访问"></a>实例变量及其访问</h3><p>无static修饰的成员变量属于每个对象的，  这个成员变量叫<strong>实例变量</strong>，之前写成员变量就是实例成员变量。</p>
+<p><strong>需要注意的是</strong>：实例成员变量属于每个对象，必须创建类的对象才可以访问。  &amp;#x20;</p>
+<p><strong>格式：对象.实例成员变量</strong></p>
+<h3 id="静态方法及其访问"><a href="#静态方法及其访问" class="headerlink" title="静态方法及其访问"></a>静态方法及其访问</h3><p>有static修饰成员方法，说明这个成员方法是属于类的，这个成员方法称为<strong>类方法或者</strong>静态方法 **。 直接用  类名访问即可。因为类只有一个，所以静态方法在内存区域中也只存在一份。所有的对象都可以共享这个方法。</p>
+<p>与静态成员变量一样，静态方法也是直接通过<strong>类名.方法名称</strong>即可访问。</p>
+<p><strong>示例</strong></p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">public class Student&#123;</span><br><span class="line">    public static String schoolName = &quot;1234&quot;；</span><br><span class="line">    public static void study()&#123;</span><br><span class="line">      System.out.println(&quot;123456&quot;);   </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>静态成员变量的访问:</strong></p>
+<p><strong>格式：类名.静态方法</strong></p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">public static void  main(String[] args)&#123;</span><br><span class="line">    Student.study();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="实例方法及其访问"><a href="#实例方法及其访问" class="headerlink" title="实例方法及其访问"></a>实例方法及其访问</h3><p>无static修饰的成员方法属于每个对象的，这个成员方法也叫做<strong>实例方法</strong>。</p>
+<p><strong>需要注意的是</strong>：实例方法是属于每个对象，必须创建类的对象才可以访问。 &amp;#x20;</p>
+<p><strong>格式：对象.实例方法</strong></p>
+<p><strong>示例</strong>：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">public class Student &#123;</span><br><span class="line">    private String name ;</span><br><span class="line">    public void run()&#123;</span><br><span class="line">        System.out.println(&quot;学生可以跑步&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public  void sleep()&#123;</span><br><span class="line">        System.out.println(&quot;学生睡觉&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public static void study()&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">public static void main(String[] args)&#123;</span><br><span class="line">    Student stu = new Student ;</span><br><span class="line">    stu.name = &quot;张三&quot;;</span><br><span class="line">    // Student.sleep();</span><br><span class="line">    stu.sleep();</span><br><span class="line">    stu.run();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>1.当 static修饰成员变量或者成员方法时，该变量称为<strong>静态变量</strong>，该方法称为<strong>静态方法</strong>。该类的每个对象都<strong>共享</strong>同一个类的静态变量和静态方法。任何对象都可以更改该静态变量的值或者访问静态方法。但是不推荐这种方式去访问。因为静态变量或者静态方法直接通过类名访问即可，完全没有必要用对象去访问。</p>
+<p>2.无static修饰的成员变量或者成员方法，称为<strong>实例变量，实例方法</strong>，实例变量和实例方法必须创建类的对象，然后通过对象来访问。</p>
+<p>3.static修饰的成员属于类，会存储在静态区，是随着类的加载而加载的，且只加载一次，所以只有一份，节省内存。存储于一块固定的内存区域（静态区），所以，可以直接被类名调用。它优先于对象存在，所以，可以被所有对象共享。</p>
+<p>4.无static修饰的成员，是属于对象，对象有多少个，他们就会出现多少份。所以必须由对象调用。</p>
+<h1 id="继承-amp-x20"><a href="#继承-amp-x20" class="headerlink" title="继承&amp;#x20;"></a>继承&amp;#x20;</h1><h3 id="继承的含义"><a href="#继承的含义" class="headerlink" title="继承的含义"></a>继承的含义</h3><p>继承描述的是事物之间的所属关系，这种关系是：<code>is-a</code> 的关系。例如，兔子属于食草动物，食草动物属于动物。可见，父类更通用，子类更具体。我们通过继承，可以使多种事物之间形成一种关系体系。</p>
+<p><strong>继承</strong>：就是子类继承父类的<strong>属性</strong>和<strong>行为</strong>，使得子类对象可以直接具有与父类相同的属性、相同的行为。子类可以直接访问父类中的<strong>非私有</strong>的属性和行为。</p>
+<h3 id="amp-x20-继承的好处"><a href="#amp-x20-继承的好处" class="headerlink" title="&amp;#x20;继承的好处"></a>&amp;#x20;继承的好处</h3><ol>
+<li>提高<strong>代码的复用性</strong>（减少代码冗余，相同代码重复利用）。</li>
+<li>使类与类之间产生了关系。</li>
+</ol>
+<h2 id="amp-x20-继承的格式"><a href="#amp-x20-继承的格式" class="headerlink" title="&amp;#x20;继承的格式"></a>&amp;#x20;继承的格式</h2><p>通过 extends 关键字，可以声明一个子类继承另外一个父类，定义格式如下：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">class 父类 &#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class 子类 extends 父类 &#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：Java是单继承的，一个类只能继承一个直接父类，跟现实世界很像，但是Java中的子类是更加强大的。</strong></p>
+<h3 id="案例代码实现"><a href="#案例代码实现" class="headerlink" title="案例代码实现"></a>案例代码实现</h3><p><strong>1.父类Human类</strong></p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">public class Human &#123;</span><br><span class="line">   private String name ;</span><br><span class="line">   private int age ;</span><br><span class="line">   public String getName() &#123;</span><br><span class="line">       return name;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public void setName(String name) &#123;</span><br><span class="line">       this.name = name;</span><br><span class="line">   &#125;</span><br><span class="line">   public int getAge() &#123;</span><br><span class="line">       return age;</span><br><span class="line">   &#125;</span><br><span class="line">   public void setAge(int age) &#123;</span><br><span class="line">       this.age = age;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>2.子类Teacher类</strong></p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">public class Teacher extends Human &#123;</span><br><span class="line">    private double salary ;</span><br><span class="line">    public void teach()&#123;</span><br><span class="line">        System.out.println(&quot;老师在认真教技术！&quot;)；</span><br><span class="line">    &#125;</span><br><span class="line">    public double getSalary() &#123;</span><br><span class="line">        return salary;</span><br><span class="line">    &#125;</span><br><span class="line">    public void setSalary(double salary) &#123;</span><br><span class="line">        this.salary = salary;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.子类Student类</strong></p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">public class Student extends Human&#123;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>4.子类BanZhuren类</strong></p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">public class Teacher extends Human &#123;</span><br><span class="line">    private double salary ;</span><br><span class="line"></span><br><span class="line">    public void admin()&#123;</span><br><span class="line">        System.out.println(&quot;班主任强调纪律问题！&quot;)；</span><br><span class="line">    &#125;</span><br><span class="line">    public double getSalary() &#123;</span><br><span class="line">        return salary;</span><br><span class="line">    &#125;</span><br><span class="line">    public void setSalary(double salary) &#123;</span><br><span class="line">        this.salary = salary;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h3><p>1.继承实际上是子类相同的属性和行为可以定义在父类中，子类特有的属性和行为由自己定义，这样就实现了相同属性和行为的重复利用，从而提高了代码复用。</p>
+<p>2.子类继承父类，就可以直接得到父类的成员变量和方法。是否可以继承所有成分呢？请看下节！</p>
+<h2 id="amp-x20-子类不能继承的内容"><a href="#amp-x20-子类不能继承的内容" class="headerlink" title="&amp;#x20;子类不能继承的内容"></a>&amp;#x20;子类不能继承的内容</h2><p>并不是父类的所有内容都可以给子类继承的：</p>
+<p><strong>子类不能继承父类的构造方法。</strong></p>
+<p><strong>值得注意的是子类可以继承父类的私有成员（成员变量，方法），只是子类无法直接访问而已，可以通过getter&#x2F;setter方法访问父类的private成员变量。</strong></p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">               Zi z = new Zi();</span><br><span class="line">               System.out.println(z.num1);</span><br><span class="line">               System.out.println(z.getNum2());</span><br><span class="line">               z.show1();</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       class Fu &#123;</span><br><span class="line">           public int num1 = 10;</span><br><span class="line">           private int num2 = 20;</span><br><span class="line">           public void show1() &#123;</span><br><span class="line">               System.out.println(&quot;show1&quot;);</span><br><span class="line">           &#125;</span><br><span class="line">           private void show2() &#123;</span><br><span class="line">               System.out.println(&quot;show2&quot;);</span><br><span class="line">           &#125;</span><br><span class="line">           public int getNum2() &#123;</span><br><span class="line">               return num2;</span><br><span class="line">           &#125;</span><br><span class="line">           public void setNum2(int num2) &#123;</span><br><span class="line">               this.num2 = num2;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       class Zi extends Fu &#123;</span><br><span class="line">       &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/image_V3qddPiBnW.png"></p>
+<h3 id="super访问父类成员变量"><a href="#super访问父类成员变量" class="headerlink" title="super访问父类成员变量"></a>super访问父类成员变量</h3><p>子父类中出现了同名的成员变量时，在子类中需要访问父类中非私有成员变量时，需要使用<code>super</code> 关键字，修饰父类成员变量，类似于之前学过的 <code>this</code> 。</p>
+<p>需要注意的是：<strong>super代表的是父类对象的引用，this代表的是当前对象的引用。</strong></p>
+<p><strong>使用格式：</strong></p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">super.父类成员变量名</span><br></pre></td></tr></table></figure>
+
+<h2 id="继承后的特点—成员方法"><a href="#继承后的特点—成员方法" class="headerlink" title="继承后的特点—成员方法"></a>继承后的特点—成员方法</h2><p>当类之间产生了关系，其中各类中的成员方法，又产生了哪些影响呢？</p>
+<h3 id="amp-x20-成员方法不重名"><a href="#amp-x20-成员方法不重名" class="headerlink" title="&amp;#x20;成员方法不重名"></a>&amp;#x20;成员方法不重名</h3><p>如果子类父类中出现<strong>不重名</strong>的成员方法，这时的调用是<strong>没有影响的</strong>。对象调用方法时，会先在子类中查找有没有对应的方法，若子类中存在就会执行子类中的方法，若子类中不存在就会执行父类中相应的方法。代码如下：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">class Fu &#123;</span><br><span class="line">  public void show() &#123;</span><br><span class="line">    System.out.println(&quot;Fu类中的show方法执行&quot;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Zi extends Fu &#123;</span><br><span class="line">  public void show2() &#123;</span><br><span class="line">    System.out.println(&quot;Zi类中的show2方法执行&quot;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">public  class Demo05 &#123;</span><br><span class="line">  public static void main(String[] args) &#123;</span><br><span class="line">    Zi z = new Zi();</span><br><span class="line">    z.show(); </span><br><span class="line">    z.show2();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="成员方法重名"><a href="#成员方法重名" class="headerlink" title="成员方法重名"></a>成员方法重名</h3><p>如果子类父类中出现<strong>重名</strong>的成员方法，则创建子类对象调用该方法的时候，子类对象会优先调用自己的方法。</p>
+<p>代码如下：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">class Fu &#123;</span><br><span class="line">  public void show() &#123;</span><br><span class="line">    System.out.println(&quot;Fu show&quot;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Zi extends Fu &#123;</span><br><span class="line">  public void show() &#123;</span><br><span class="line">    System.out.println(&quot;Zi show&quot;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class ExtendsDemo05&#123;</span><br><span class="line">  public static void main(String[] args) &#123;</span><br><span class="line">    Zi z = new Zi();</span><br><span class="line">    z.show();  // Zi show</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="amp-x20-方法重写"><a href="#amp-x20-方法重写" class="headerlink" title="&amp;#x20;方法重写"></a>&amp;#x20;方法重写</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p><strong>方法重写</strong> ：子类中出现与父类一模一样的方法时（返回值类型，方法名和参数列表都相同），会出现覆盖效果，也称为重写或者复写。<strong>声明不变，重新实现</strong>。</p>
+<h3 id="使用场景与案例"><a href="#使用场景与案例" class="headerlink" title="使用场景与案例"></a>使用场景与案例</h3><p>发生在子父类之间的关系。<br>子类继承了父类的方法，但是子类觉得父类的这方法不足以满足自己的需求，子类重新写了一个与父类同名的方法，以便覆盖父类的该方 法。</p>
+<p>例如：定义了一个动物类代码如下：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">public class Animal  &#123;</span><br><span class="line">    public void run()&#123;</span><br><span class="line">        System.out.println(&quot;动物跑的很快！&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public void cry()&#123;</span><br><span class="line">        System.out.println(&quot;动物都可以叫~~~&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后定义一个猫类，猫可能认为父类cry()方法不能满足自己的需求</p>
+<p>代码如下：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">public class Cat extends Animal &#123;</span><br><span class="line">    public void cry()&#123;</span><br><span class="line">        System.out.println(&quot;喵喵喵!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Test &#123;</span><br><span class="line">  public static void main(String[] args) &#123;</span><br><span class="line">        Cat ddm = new Cat()；</span><br><span class="line">        ddm.run();</span><br><span class="line">        ddm.cry();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="amp-x20-注意事项"><a href="#amp-x20-注意事项" class="headerlink" title="&amp;#x20;注意事项"></a>&amp;#x20;注意事项</h3><ol>
+<li>方法重写是发生在子父类之间的关系。</li>
+<li>子类方法覆盖父类方法，必须要保证权限大于等于父类权限。</li>
+<li>子类方法覆盖父类方法，返回值类型、函数名和参数列表都要一模一样。</li>
+</ol>
+<h2 id="amp-x20-继承后的特点—构造方法"><a href="#amp-x20-继承后的特点—构造方法" class="headerlink" title="&amp;#x20;继承后的特点—构造方法"></a>&amp;#x20;继承后的特点—构造方法</h2><h3 id="amp-x20-引入"><a href="#amp-x20-引入" class="headerlink" title="&amp;#x20;引入"></a>&amp;#x20;引入</h3><p>当类之间产生了关系，其中各类中的构造方法，又产生了哪些影响呢？</p>
+<ol>
+<li>构造方法的名字是与类名一致的。所以子类是无法继承父类构造方法的。</li>
+<li>构造方法的作用是初始化对象成员变量数据的。所以子类的初始化过程中，必须先执行父类的初始化动作。子类的构造方法中默认有一个<code>super()</code> ，表示调用父类的构造方法，父类成员变量初始化后，才可以给子类使用。</li>
+</ol>
+<p><strong>继承后子类构方法器特点:子类所有构造方法的第一行都会默认先调用父类的无参构造方法</strong></p>
+<h3 id="案例演示"><a href="#案例演示" class="headerlink" title="案例演示"></a>案例演示</h3><p>按如下需求定义类:</p>
+<ol>
+<li><p>人类</p>
+<p>成员变量: 姓名,年龄</p>
+<p>成员方法: 吃饭</p>
+</li>
+<li><p>学生类</p>
+<p>成员变量: 姓名,年龄,成绩</p>
+<p>成员方法: 吃饭</p>
+</li>
+</ol>
+<p>示例代码：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">class Person &#123;</span><br><span class="line">    private String name;</span><br><span class="line">    private int age;</span><br><span class="line"></span><br><span class="line">    public Person() &#123;</span><br><span class="line">        System.out.println(&quot;父类无参&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // getter/setter省略</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Student extends Person &#123;</span><br><span class="line">    private double score;</span><br><span class="line"></span><br><span class="line">    public Student() &#123;</span><br><span class="line">        //super(); // 调用父类无参,默认就存在，可以不写，必须再第一行</span><br><span class="line">        System.out.println(&quot;子类无参&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">     public Student(double score) &#123;</span><br><span class="line">        //super();  // 调用父类无参,默认就存在，可以不写，必须再第一行</span><br><span class="line">        this.score = score;    </span><br><span class="line">        System.out.println(&quot;子类有参&quot;);</span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Demo07 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Student s1 = new Student();</span><br><span class="line">        System.out.println(&quot;----------&quot;);</span><br><span class="line">        Student s2 = new Student(99.9);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="amp-x20-小结"><a href="#amp-x20-小结" class="headerlink" title="&amp;#x20;小结"></a>&amp;#x20;小结</h3><ul>
+<li>子类构造方法执行的时候，都会在第一行默认先调用父类无参数构造方法一次。</li>
+<li>子类构造方法的第一行都隐含了一个<strong>super()</strong> 去调用父类无参数构造方法，<strong>super()</strong> 可以省略不写。</li>
+</ul>
+<h2 id="super-…-和this-…"><a href="#super-…-和this-…" class="headerlink" title="super(…)和this(…)"></a>super(…)和this(…)</h2><h3 id="amp-x20-super和this的用法格式"><a href="#amp-x20-super和this的用法格式" class="headerlink" title="&amp;#x20;super和this的用法格式"></a>&amp;#x20;super和this的用法格式</h3><p>super和this完整的用法如下，</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">this.成员变量      --    本类的</span><br><span class="line">super.成员变量      --    父类的</span><br><span class="line"></span><br><span class="line">this.成员方法名()    --    本类的    </span><br><span class="line">super.成员方法名()   --    父类的</span><br></pre></td></tr></table></figure>
+
+<p>接下来使用调用构造方法格式：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">super(...) -- 调用父类的构造方法，根据参数匹配确认</span><br><span class="line">this(...) -- 调用本类的其他构造方法，根据参数匹配确认</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong></p>
+<p><strong>子类的每个构造方法中均有默认的super()，调用父类的空参构造。手动调用父类构造会覆盖默认的super()。</strong></p>
+<p><strong>super() 和 this() 都必须是在构造方法的第一行，所以不能同时出现。</strong></p>
+<p>super(..)是根据参数去确定调用父类哪个构造方法的。</p>
+<h3 id="this-…-用法"><a href="#this-…-用法" class="headerlink" title="this(…)用法"></a>this(…)用法</h3><p>this(…)</p>
+<ul>
+<li>默认是去找本类中的其他构造方法，根据参数来确定具体调用哪一个构造方法。</li>
+<li>为了借用其他构造方法的功能。</li>
+</ul>
+<p>代码示例</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class StudentTest &#123;</span><br><span class="line">            public static void main(String[] args) &#123;</span><br><span class="line">                Student xuGan = new Student();</span><br><span class="line">                System.out.println(xuGan.getName()); </span><br><span class="line">                System.out.println(xuGan.getAge());</span><br><span class="line">                System.out.println(xuGan.getSex());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        class Student&#123;</span><br><span class="line">            private String name ;</span><br><span class="line">            private int age ;</span><br><span class="line">            private char sex ;</span><br><span class="line">            public Student() &#123;</span><br><span class="line">                // 很弱，我的兄弟很牛逼啊，我可以调用其他构造方法：Student(String name, int age, char sex)</span><br><span class="line">                this(&quot;张三&quot;,21,&#x27;男&#x27;);</span><br><span class="line">            &#125;</span><br><span class="line">            public Student(String name, int age, char sex) &#123;</span><br><span class="line">                this.name = name ;</span><br><span class="line">                this.age = age   ;</span><br><span class="line">                this.sex = sex   ;</span><br><span class="line">            &#125;</span><br><span class="line">            public String getName() &#123;</span><br><span class="line">                return name;</span><br><span class="line">            &#125;</span><br><span class="line">            public void setName(String name) &#123;</span><br><span class="line">                this.name = name;</span><br><span class="line">            &#125;</span><br><span class="line">            public int getAge() &#123;</span><br><span class="line">                return age;</span><br><span class="line">            &#125;</span><br><span class="line">            public void setAge(int age) &#123;</span><br><span class="line">                this.age = age;</span><br><span class="line">            &#125;</span><br><span class="line">            public char getSex() &#123;</span><br><span class="line">                return sex;</span><br><span class="line">            &#125;</span><br><span class="line">            public void setSex(char sex) &#123;</span><br><span class="line">                this.sex = sex;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/image_DJeAGtpOk1.png"></p>
+<h3 id="小结-2"><a href="#小结-2" class="headerlink" title="小结"></a>小结</h3><ul>
+<li><strong>子类的每个构造方法中均有默认的super()，调用父类的空参构造。手动调用父类构造会覆盖默认的super()。</strong></li>
+<li><strong>super() 和 this() 都必须是在构造方法的第一行，所以不能同时出现。</strong></li>
+<li><strong>super(..)和this(…)是根据参数去确定调用父类哪个构造方法的。</strong></li>
+<li>super(..)可以调用父类构造方法初始化继承自父类的成员变量的数据。</li>
+<li>this(..)可以调用本类中的其他构造方法。</li>
+</ul>
+<h2 id="多态的形式"><a href="#多态的形式" class="headerlink" title="多态的形式"></a>多态的形式</h2><p><strong>多态是继封装、继承之后，面向对象的第三大特性。</strong></p>
+<p><strong>多态是出现在继承或者实现关系中的</strong>。</p>
+<p><strong>多态体现的格式</strong>：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">父类类型 变量名 = new 子类/实现类构造器;</span><br><span class="line">变量名.方法名();</span><br></pre></td></tr></table></figure>
+
+<p><strong>多态的前提</strong>：有继承关系，子类对象是可以赋值给父类类型的变量。例如Animal是一个动物类型，而Cat是一个猫类型。Cat继承了Animal，Cat对象也是Animal类型，自然可以赋值给父类类型的变量。</p>
+<h2 id="amp-x20-多态的定义和前提"><a href="#amp-x20-多态的定义和前提" class="headerlink" title="&amp;#x20;多态的定义和前提"></a>&amp;#x20;多态的定义和前提</h2><p><strong>多态</strong>： 是指同一行为，具有多个不同表现形式。</p>
+<p>从上面案例可以看出，Cat和Dog都是动物，都是吃这一行为，但是出现的效果（表现形式）是不一样的。</p>
+<p><strong>前提【重点】</strong></p>
+<ol>
+<li>有继承或者实现关系</li>
+<li>方法的重写【意义体现：不重写，无意义】</li>
+<li>父类引用指向子类对象【格式体现】<blockquote>
+<p>父类类型：指子类对象继承的父类类型，或者实现的父接口类型。</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="多态的运行特点"><a href="#多态的运行特点" class="headerlink" title="多态的运行特点"></a>多态的运行特点</h2><p>调用成员变量时：编译看左边，运行看左边</p>
+<p>调用成员方法时：编译看左边，运行看右边</p>
+<p>代码示例：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Fu f = new Zi()；</span><br><span class="line">//编译看左边的父类中有没有name这个属性，没有就报错</span><br><span class="line">//在实际运行的时候，把父类name属性的值打印出来</span><br><span class="line">System.out.println(f.name);</span><br><span class="line">//编译看左边的父类中有没有show这个方法，没有就报错</span><br><span class="line">//在实际运行的时候，运行的是子类中的show方法</span><br><span class="line">f.show();</span><br></pre></td></tr></table></figure>
+
+<h2 id="amp-x20-多态的弊端"><a href="#amp-x20-多态的弊端" class="headerlink" title="&amp;#x20;多态的弊端"></a>&amp;#x20;多态的弊端</h2><p>我们已经知道多态编译阶段是看左边父类类型的，如果子类有些独有的功能，此时<strong>多态的写法就无法访问子类独有功能了</strong>。</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">class Animal&#123;</span><br><span class="line">    public  void eat()｛</span><br><span class="line">        System.out.println(&quot;动物吃东西！&quot;)</span><br><span class="line">    ｝</span><br><span class="line">&#125;</span><br><span class="line">class Cat extends Animal &#123;  </span><br><span class="line">    public void eat() &#123;  </span><br><span class="line">        System.out.println(&quot;吃鱼&quot;);  </span><br><span class="line">    &#125;  </span><br><span class="line">   </span><br><span class="line">    public void catchMouse() &#123;  </span><br><span class="line">        System.out.println(&quot;抓老鼠&quot;);  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br><span class="line"></span><br><span class="line">class Dog extends Animal &#123;  </span><br><span class="line">    public void eat() &#123;  </span><br><span class="line">        System.out.println(&quot;吃骨头&quot;);  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Test&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        Animal a = new Cat();</span><br><span class="line">        a.eat();</span><br><span class="line">        a.catchMouse();//编译报错，编译看左边，Animal没有这个方法</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="amp-x20-引用类型转换"><a href="#amp-x20-引用类型转换" class="headerlink" title="&amp;#x20;引用类型转换"></a>&amp;#x20;引用类型转换</h2><h3 id="amp-x20-为什么要转型"><a href="#amp-x20-为什么要转型" class="headerlink" title="&amp;#x20;为什么要转型"></a>&amp;#x20;为什么要转型</h3><p><strong>多态的写法就无法访问子类独有功能了。</strong></p>
+<p>当使用多态方式调用方法时，首先检查父类中是否有该方法，如果没有，则编译错误。也就是说，<strong>不能调用</strong>子类拥有，而父类没有的方法。编译都错误，更别说运行了。所以，想要调用子类特有的方法，必须做向下转型。</p>
+<p>回顾基本数据类型转换</p>
+<ul>
+<li>自动转换: 范围小的赋值给范围大的.自动完成:double d &#x3D; 5;</li>
+<li>强制转换: 范围大的赋值给范围小的,强制转换:int i &#x3D; (int)3.14</li>
+</ul>
+<p>​     多态的转型分为向上转型（自动转换）与向下转型（强制转换）两种。</p>
+<h3 id="amp-x20-向上转型（自动转换）"><a href="#amp-x20-向上转型（自动转换）" class="headerlink" title="&amp;#x20;向上转型（自动转换）"></a>&amp;#x20;向上转型（自动转换）</h3><ul>
+<li><strong>向上转型</strong>：多态本身是子类类型向父类类型向上转换（自动转换）的过程，这个过程是默认的。<br>当父类引用指向一个子类对象时，便是向上转型。<br>使用格式：</li>
+</ul>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">父类类型  变量名 = new 子类类型();</span><br><span class="line">如：Animal a = new Cat();</span><br></pre></td></tr></table></figure>
+
+<p><strong>原因是：父类类型相对与子类来说是大范围的类型，Animal是动物类，是父类类型。Cat是猫类，是子类类型。Animal类型的范围当然很大，包含一切动物。</strong> ​<strong>原因是：父类类型相对与子类来说是大范围的类型，Animal是动物类，是父类类型。Cat是猫类，是子类类型。Animal类型的范围当然很大，包含一切动物。</strong> 所以子类范围小可以直接自动转型给父类类型的变量。 所以子类范围小可以直接自动转型给父类类型的变量。</p>
+<h3 id="amp-x20-向下转型（强制转换）"><a href="#amp-x20-向下转型（强制转换）" class="headerlink" title="&amp;#x20;向下转型（强制转换）"></a>&amp;#x20;向下转型（强制转换）</h3><ul>
+<li><strong>向下转型</strong>：父类类型向子类类型向下转换的过程，这个过程是强制的。<br>一个已经向上转型的子类对象，将父类引用转为子类引用，可以使用强制类型转换的格式，便是向下转型。</li>
+</ul>
+<p>使用格式：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">子类类型 变量名 = (子类类型) 父类变量名;</span><br><span class="line">如:Aniaml a = new Cat();</span><br><span class="line">   Cat c =(Cat) a;  </span><br></pre></td></tr></table></figure>
+
+<h3 id="转型的异常"><a href="#转型的异常" class="headerlink" title="转型的异常"></a>转型的异常</h3><p>转型的过程中，一不小心就会遇到这样的问题，请看如下代码：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">public class Test &#123;</span><br><span class="line">    public static void main(String[] args)  </span><br><span class="line">        Animal a = new Cat();  </span><br><span class="line">        a.eat();                </span><br><span class="line">        Dog d = (Dog)a;       </span><br><span class="line">        d.watchHouse();       </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="amp-x20-instanceof关键字"><a href="#amp-x20-instanceof关键字" class="headerlink" title="&amp;#x20;instanceof关键字"></a>&amp;#x20;instanceof关键字</h3><p>为了避免ClassCastException的发生，Java提供了 <code>instanceof</code> 关键字，给引用变量做类型的校验，格式如下：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">变量名 instanceof 数据类型 </span><br><span class="line">如果变量属于该数据类型或者其子类类型，返回true。</span><br><span class="line">如果变量不属于该数据类型或者其子类类型，返回false。</span><br></pre></td></tr></table></figure>
+
+<h2 id="包"><a href="#包" class="headerlink" title="包"></a>包</h2><p>​	包在操作系统中其实就是一个文件夹。<strong>包是用来分门别类的管理技术，不同的技术类放在不同的包下</strong>，方便管理和维护。</p>
+<p><strong>包名的命名规范</strong>：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">路径名.路径名.xxx.xxx</span><br><span class="line"><span class="comment">// 例如：com.itheima.oa</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>包名一般是公司域名的倒写。例如：黑马是www.itheima.com,包名就可以定义成com.itheima.技术名称。</li>
+<li>包名必须用”.“连接。</li>
+<li>包名的每个路径名必须是一个合法的标识符，而且不能是Java的关键字。</li>
+</ul>
+<h2 id="导包"><a href="#导包" class="headerlink" title="导包"></a>导包</h2><p>什么时候需要导包？</p>
+<p>​	情况一：在使用Java中提供的非核心包中的类时</p>
+<p>​	情况二：使用自己写的其他包中的类时</p>
+<p>什么时候不需要导包？</p>
+<p>​	情况一：在使用Java核心包（java.lang）中的类时</p>
+<p>​	情况二：在使用自己写的同一个包中的类时</p>
+<h2 id="使用不同包下的相同类怎么办？"><a href="#使用不同包下的相同类怎么办？" class="headerlink" title="使用不同包下的相同类怎么办？"></a>使用不同包下的相同类怎么办？</h2><p>假设demo1和demo2中都有一个Student该如何使用？</p>
+<p>代码示例：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">//使用全类名的形式即可。</span><br><span class="line">//全类名：包名 + 类名</span><br><span class="line">//拷贝全类名的快捷键：选中类名crtl + shift + alt + c 或者用鼠标点copy，再点击copy Reference</span><br><span class="line">com.itheima.homework.demo1.Student s1 = new com.itheima.homework.demo1.Student();</span><br><span class="line">com.itheima.homework.demo2.Student s2 = new com.itheima.homework.demo2.Student();</span><br></pre></td></tr></table></figure>
+
+<h2 id="amp-x20-权限修饰符"><a href="#amp-x20-权限修饰符" class="headerlink" title="&amp;#x20;权限修饰符"></a>&amp;#x20;权限修饰符</h2><p>​	在Java中提供了四种访问权限，使用不同的访问权限修饰符修饰时，被修饰的内容会有不同的访问权限，</p>
+<ul>
+<li>public：公共的，所有地方都可以访问。</li>
+<li>protected：本类 ，本包，其他包中的子类都可以访问。</li>
+<li>默认（没有修饰符）：本类 ，本包可以访问。<br>注意：默认是空着不写，不是default</li>
+<li>private：私有的，当前类可以访问。<br><code>public &gt; protected &gt; 默认 &gt; private</code></li>
+</ul>
+<h2 id="amp-x20-不同权限的访问能力"><a href="#amp-x20-不同权限的访问能力" class="headerlink" title="&amp;#x20;不同权限的访问能力"></a>&amp;#x20;不同权限的访问能力</h2><table>
+<thead>
+<tr>
+<th></th>
+<th>public</th>
+<th>protected</th>
+<th>默认</th>
+<th>private</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>同一类中</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>同一包中的类</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+</tr>
+<tr>
+<td>不同包的子类</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>不同包中的无关类</td>
+<td>√</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>可见，public具有最大权限。private则是最小权限。</p>
+<p>编写代码时，如果没有特殊的考虑，建议这样使用权限：</p>
+<ul>
+<li>成员变量使用<code>private</code> ，隐藏细节。</li>
+<li>构造方法使用<code> public</code> ，方便创建对象。</li>
+<li>成员方法使用<code>public</code> ，方便调用方法。</li>
+</ul>
+<blockquote>
+<p>小贴士：不加权限修饰符，就是默认权限</p>
+</blockquote>
+<h1 id="final关键字"><a href="#final关键字" class="headerlink" title="final关键字"></a>final关键字</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>​	学习了继承后，我们知道，子类可以在父类的基础上改写父类内容，比如，方法重写。</p>
+<p>如果有一个方法我不想别人去改写里面内容，该怎么办呢？</p>
+<p>Java提供了<code>final</code> 关键字，表示修饰的内容不可变。</p>
+<ul>
+<li><strong>final</strong>：  不可改变，最终的含义。可以用于修饰类、方法和变量。<ul>
+<li>类：被修饰的类，不能被继承。</li>
+<li>方法：被修饰的方法，不能被重写。</li>
+<li>变量：被修饰的变量，有且仅能被赋值一次。</li>
+</ul>
+</li>
+</ul>
+<h2 id="amp-x20-使用方式"><a href="#amp-x20-使用方式" class="headerlink" title="&amp;#x20;使用方式"></a>&amp;#x20;使用方式</h2><h3 id="修饰类"><a href="#修饰类" class="headerlink" title="修饰类"></a>修饰类</h3><p>final修饰的类，不能被继承。</p>
+<p>格式如下：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">final class 类名 &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>代码:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">final class Fu &#123;</span><br><span class="line">&#125;</span><br><span class="line">// class Zi extends Fu &#123;&#125; // 报错,不能继承final的类</span><br></pre></td></tr></table></figure>
+
+<h3 id="amp-x20-修饰方法"><a href="#amp-x20-修饰方法" class="headerlink" title="&amp;#x20;修饰方法"></a>&amp;#x20;修饰方法</h3><p>final修饰的方法，不能被重写。<br>格式如下：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">修饰符 final 返回值类型 方法名(参数列表)&#123;</span><br><span class="line">    //方法体</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="修饰变量-成员变量"><a href="#修饰变量-成员变量" class="headerlink" title="修饰变量-成员变量"></a>修饰变量-成员变量</h3><p>成员变量涉及到初始化的问题，初始化方式有显示初始化和构造方法初始化，只能选择其中一个：</p>
+<ul>
+<li>显示初始化(在定义成员变量的时候立马赋值)（常用）；</li>
+</ul>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">public class Student &#123;</span><br><span class="line">    final int num = 10;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="amp-x20-抽象类"><a href="#amp-x20-抽象类" class="headerlink" title="&amp;#x20;抽象类"></a>&amp;#x20;抽象类</h1><h2 id="amp-x20-概述"><a href="#amp-x20-概述" class="headerlink" title="&amp;#x20;概述"></a>&amp;#x20;概述</h2><h3 id="amp-x20-抽象类引入"><a href="#amp-x20-抽象类引入" class="headerlink" title="&amp;#x20;抽象类引入"></a>&amp;#x20;抽象类引入</h3><p>​	父类中的方法，被它的子类们重写，子类各自的实现都不尽相同。那么父类的方法声明和方法主体，只有声明还有意义，而方法主体则没有存在的意义了(因为子类对象会调用自己重写的方法)。换句话说，父类可能知道子类应该有哪个功能，但是功能具体怎么实现父类是不清楚的（由子类自己决定），父类只需要提供一个没有方法体的定义即可，具体实现交给子类自己去实现。<strong>我们把没有方法体的方法称为抽象方法。Java语法规定，包含抽象方法的类就是抽象类</strong>。</p>
+<ul>
+<li><strong>抽象方法</strong> ： 没有方法体的方法。</li>
+<li><strong>抽象类</strong>：包含抽象方法的类。</li>
+</ul>
+<h2 id="amp-x20-abstract使用格式"><a href="#amp-x20-abstract使用格式" class="headerlink" title="&amp;#x20;abstract使用格式"></a>&amp;#x20;abstract使用格式</h2><p><strong>abstract是抽象的意思，用于修饰方法方法和类，修饰的方法是抽象方法，修饰的类是抽象类。</strong></p>
+<h3 id="amp-x20-抽象方法"><a href="#amp-x20-抽象方法" class="headerlink" title="&amp;#x20;抽象方法"></a>&amp;#x20;抽象方法</h3><p>使用<code>abstract</code> 关键字修饰方法，该方法就成了抽象方法，抽象方法只包含一个方法名，而没有方法体。</p>
+<p>定义格式：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">修饰符 abstract 返回值类型 方法名 (参数列表)；</span><br></pre></td></tr></table></figure>
+
+<p>代码示例：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">public abstract void run()；</span><br></pre></td></tr></table></figure>
+
+<h3 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h3><p>如果一个类包含抽象方法，那么该类必须是抽象类。<strong>注意：抽象类不一定有抽象方法，但是有抽象方法的类必须定义成抽象类。</strong></p>
+<p>定义格式：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">abstract class 类名字 &#123; </span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>代码示例：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">public abstract class Animal &#123;</span><br><span class="line">    public abstract void run()；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="amp-x20-抽象类的特征"><a href="#amp-x20-抽象类的特征" class="headerlink" title="&amp;#x20;抽象类的特征"></a>&amp;#x20;抽象类的特征</h2><p>抽象类的特征总结起来可以说是 <strong>有得有失</strong></p>
+<p><strong>有得：抽象类得到了拥有抽象方法的能力。</strong></p>
+<p><strong>有失：抽象类失去了创建对象的能力。</strong></p>
+<p>其他成员（构造方法，实例方法，静态方法等）抽象类都是具备的。</p>
+<h2 id="amp-x20-抽象类的细节"><a href="#amp-x20-抽象类的细节" class="headerlink" title="&amp;#x20;抽象类的细节"></a>&amp;#x20;抽象类的细节</h2><p>不需要背，只要当idea报错之后，知道如何修改即可。</p>
+<p>关于抽象类的使用，以下为语法上要注意的细节，虽然条目较多，但若理解了抽象的本质，无需死记硬背。</p>
+<ol>
+<li>抽象类<strong>不能创建对象</strong>，如果创建，编译无法通过而报错。只能创建其非抽象子类的对象。<blockquote>
+<p>理解：假设创建了抽象类的对象，调用抽象的方法，而抽象方法没有具体的方法体，没有意义。</p>
+</blockquote>
+</li>
+<li>抽象类中，可以有构造方法，是供子类创建对象时，初始化父类成员使用的。<blockquote>
+<p>理解：子类的构造方法中，有默认的super()，需要访问父类构造方法。</p>
+</blockquote>
+</li>
+<li>抽象类中，不一定包含抽象方法，但是有抽象方法的类必定是抽象类。<blockquote>
+<p>理解：未包含抽象方法的抽象类，目的就是不想让调用者创建该类对象，通常用于某些特殊的类结构设计。</p>
+</blockquote>
+</li>
+<li>抽象类的子类，必须重写抽象父类中<strong>所有的</strong>抽象方法，否则子类也必须定义成抽象类，编译无法通过而报错。<blockquote>
+<p>理解：假设不重写所有抽象方法，则类中可能包含抽象方法。那么创建对象后，调用抽象的方法，没有意义。</p>
+</blockquote>
+</li>
+<li>抽象类存在的意义是为了被子类继承。<blockquote>
+<p>理解：抽象类中已经实现的是模板中确定的成员，抽象类不确定如何实现的定义成抽象方法，交给具体的子类去实现。</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="amp-x20-抽象类存在的意义"><a href="#amp-x20-抽象类存在的意义" class="headerlink" title="&amp;#x20;抽象类存在的意义"></a>&amp;#x20;抽象类存在的意义</h2><p>​	抽象类存在的意义是为了被子类继承，否则抽象类将毫无意义。抽象类可以强制让子类，一定要按照规定的格式进行重写。</p>
+<h1 id="amp-x20-接口"><a href="#amp-x20-接口" class="headerlink" title="&amp;#x20;接口"></a>&amp;#x20;接口</h1><h2 id="amp-x20-概述-1"><a href="#amp-x20-概述-1" class="headerlink" title="&amp;#x20;概述"></a>&amp;#x20;概述</h2><p><strong>接口是更加彻底的抽象，JDK7之前，包括JDK7，接口中全部是抽象方法。接口同样是不能创建对象的</strong>。</p>
+<h2 id="amp-x20-代码格式"><a href="#amp-x20-代码格式" class="headerlink" title="&amp;#x20;代码格式"></a>&amp;#x20;代码格式</h2><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">//接口的定义格式：</span><br><span class="line">interface 接口名称&#123;</span><br><span class="line">    // 抽象方法</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 接口的声明：interface</span><br><span class="line">// 接口名称：首字母大写，满足“驼峰模式”</span><br></pre></td></tr></table></figure>
+
+<h2 id="接口成分的特点"><a href="#接口成分的特点" class="headerlink" title="接口成分的特点"></a>接口成分的特点</h2><p>在JDK7，包括JDK7之前，接口中的<strong>只有</strong>包含：抽象方法和常量</p>
+<h3 id="抽象方法"><a href="#抽象方法" class="headerlink" title="抽象方法"></a>抽象方法</h3><p>​       注意：接口中的抽象方法默认会自动加上public abstract修饰程序员无需自己手写！！<br>​       按照规范：以后接口中的抽象方法建议不要写上public abstract。因为没有必要啊，默认会加上。</p>
+<h3 id="amp-x20-常量"><a href="#amp-x20-常量" class="headerlink" title="&amp;#x20;常量"></a>&amp;#x20;常量</h3><p>在接口中定义的成员变量默认会加上： public static final修饰。也就是说在接口中定义的成员变量实际上是一个常量。这里是使用public static final修饰后，变量值就不可被修改，并且是静态化的变量可以直接用接口名访问，所以也叫常量。常量必须要给初始值。常量命名规范建议字母全部大写，多个单词用下划线连接。</p>
+<h2 id="amp-x20-基本的实现"><a href="#amp-x20-基本的实现" class="headerlink" title="&amp;#x20;基本的实现"></a>&amp;#x20;基本的实现</h2><h3 id="amp-x20-实现接口的概述"><a href="#amp-x20-实现接口的概述" class="headerlink" title="&amp;#x20;实现接口的概述"></a>&amp;#x20;实现接口的概述</h3><p>类与接口的关系为实现关系，即<strong>类实现接口</strong>，该类可以称为接口的实现类，也可以称为接口的子类。实现的动作类似继承，格式相仿，只是关键字不同，实现使用 <code> implements</code>关键字。</p>
+<h3 id="amp-x20-实现接口的格式"><a href="#amp-x20-实现接口的格式" class="headerlink" title="&amp;#x20;实现接口的格式"></a>&amp;#x20;实现接口的格式</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">class 类名 implements 接口1,接口2,接口3...&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="类实现接口的要求和意义"><a href="#类实现接口的要求和意义" class="headerlink" title="类实现接口的要求和意义"></a>类实现接口的要求和意义</h3><ol>
+<li>必须重写实现的全部接口中所有抽象方法。</li>
+<li>如果一个类实现了接口，但是没有重写完全部接口的全部抽象方法，这个类也必须定义成抽象类。</li>
+<li><strong>意义：接口体现的是一种规范，接口对实现类是一种强制性的约束，要么全部完成接口申明的功能，要么自己也定义成抽象类。这正是一种强制性的规范。</strong></li>
+</ol>
+<h3 id="amp-x20-类与接口基本实现案例"><a href="#amp-x20-类与接口基本实现案例" class="headerlink" title="&amp;#x20; 类与接口基本实现案例"></a>&amp;#x20; 类与接口基本实现案例</h3><p>假如定义一个运动员的<strong>接口</strong>（规范），代码如下：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">public interface SportMan &#123;</span><br><span class="line">    void run(); // 抽象方法，跑步。</span><br><span class="line">    void law(); // 抽象方法，遵守法律。</span><br><span class="line">    String compittion(String project);  // 抽象方法，比赛。</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="接口与接口的多继承"><a href="#接口与接口的多继承" class="headerlink" title="接口与接口的多继承"></a>接口与接口的多继承</h2><p>Java中，接口与接口之间是可以多继承的：也就是一个接口可以同时继承多个接口。</p>
+<p><strong>类与接口是实现关系</strong></p>
+<p><strong>接口与接口是继承关系</strong></p>
+<h2 id="扩展：接口的细节"><a href="#扩展：接口的细节" class="headerlink" title="扩展：接口的细节"></a>扩展：接口的细节</h2><ol>
+<li>当两个接口中存在相同抽象方法的时候，该怎么办？</li>
+</ol>
+<blockquote>
+<p>只要重写一次即可。此时重写的方法，既表示重写1接口的，也表示重写2接口的。</p>
+</blockquote>
+<ol>
+<li>实现类能不能继承A类的时候，同时实现其他接口呢？</li>
+</ol>
+<blockquote>
+<p>继承的父类，就好比是亲爸爸一样<br>实现的接口，就好比是干爹一样<br>可以继承一个类的同时，再实现多个接口，只不过，要把接口里面所有的抽象方法，全部实现。</p>
+</blockquote>
+<ol>
+<li>实现类能不能继承一个抽象类的时候，同时实现其他接口呢？</li>
+</ol>
+<blockquote>
+<p>实现类可以继承一个抽象类的同时，再实现其他多个接口，只不过要把里面所有的抽象方法全部重写。</p>
+</blockquote>
+<ol>
+<li>实现类Zi，实现了一个接口，还继承了一个Fu类。假设在接口中有一个方法，父类中也有一个相同的方法。子类如何操作呢？</li>
+</ol>
+<blockquote>
+<p>处理办法一：如果父类中的方法体，能满足当前业务的需求，在子类中可以不用重写。<br>处理办法二：如果父类中的方法体，不能满足当前业务的需求，需要在子类中重写。</p>
+</blockquote>
+<ol>
+<li>如果一个接口中，有10个抽象方法，但是我在实现类中，只需要用其中一个，该怎么办?</li>
+</ol>
+<blockquote>
+<p>可以在接口跟实现类中间，新建一个中间类（适配器类）<br>让这个适配器类去实现接口，对接口里面的所有的方法做空重写。<br>让子类继承这个适配器类，想要用到哪个方法，就重写哪个方法。<br>因为中间类没有什么实际的意义，所以一般会把中间类定义为抽象的，不让外界创建对象</p>
+</blockquote>
+<h1 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h1><h3 id="amp-x20-什么是内部类"><a href="#amp-x20-什么是内部类" class="headerlink" title="&amp;#x20;什么是内部类"></a>&amp;#x20;什么是内部类</h3><p>将一个类A定义在另一个类B里面，里面的那个类A就称为<strong>内部类</strong>，B则称为<strong>外部类</strong>。可以把内部类理解成寄生，外部类理解成宿主。</p>
+<h3 id="amp-x20-什么时候使用内部类"><a href="#amp-x20-什么时候使用内部类" class="headerlink" title="&amp;#x20;什么时候使用内部类"></a>&amp;#x20;什么时候使用内部类</h3><p>一个事物内部还有一个独立的事物，内部的事物脱离外部的事物无法独立使用</p>
+<ol>
+<li>人里面有一颗心脏。</li>
+<li>汽车内部有一个发动机。</li>
+<li>为了实现更好的封装性。</li>
+</ol>
+<h2 id="amp-x20-内部类的分类"><a href="#amp-x20-内部类的分类" class="headerlink" title="&amp;#x20;内部类的分类"></a>&amp;#x20;内部类的分类</h2><p>按定义的位置来分</p>
+<ol>
+<li><strong>成员内部内</strong>，类定义在了成员位置 (类中方法外称为成员位置，无static修饰的内部类)</li>
+<li><strong>静态内部类</strong>，类定义在了成员位置 (类中方法外称为成员位置，有static修饰的内部类)</li>
+<li><strong>局部内部类</strong>，类定义在方法内</li>
+<li><strong>匿名内部类</strong>，没有名字的内部类，可以在方法中，也可以在类中方法外。</li>
+</ol>
+<h2 id="amp-x20-成员内部类"><a href="#amp-x20-成员内部类" class="headerlink" title="&amp;#x20;成员内部类"></a>&amp;#x20;成员内部类</h2><p><strong>成员内部类特点</strong>：</p>
+<ul>
+<li>无static修饰的内部类，属于外部类对象的。</li>
+<li>宿主：外部类对象。</li>
+</ul>
+<p><strong>内部类的使用格式</strong>：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">外部类.内部类。 // 访问内部类的类型都是用 外部类.内部类</span><br></pre></td></tr></table></figure>
+
+<p><strong>获取成员内部类对象的两种方式</strong>：</p>
+<p>方式一：外部直接创建成员内部类的对象</p>
+<p>方式二：在外部类中定义一个方法提供内部类的对象</p>
+<p><strong>案例演示</strong></p>
+<h2 id="amp-x20-成员内部类的细节"><a href="#amp-x20-成员内部类的细节" class="headerlink" title="&amp;#x20;成员内部类的细节"></a>&amp;#x20;成员内部类的细节</h2><p>编写成员内部类的注意点：</p>
+<ol>
+<li>成员内部类可以被一些修饰符所修饰，比如： private，默认，protected，public，static等</li>
+<li>在成员内部类里面，JDK16之前不能定义静态变量，JDK16开始才可以定义静态变量。</li>
+<li>创建内部类对象时，对象中有一个隐含的Outer.this记录外部类对象的地址值。（请参见3.6节的内存图）</li>
+</ol>
+<p>详解：</p>
+<p>​	内部类被private修饰，外界无法直接获取内部类的对象，只能通过3.3节中的方式二获取内部类的对象</p>
+<p>​	被其他权限修饰符修饰的内部类一般用3.3节中的方式一直接获取内部类的对象</p>
+<p>​	内部类被static修饰是成员内部类中的特殊情况，叫做静态内部类下面单独学习。</p>
+<p>​	内部类如果想要访问外部类的成员变量，外部类的变量必须用final修饰，JDK8以前必须手动写final，JDK8之后不需要手动写，JDK默认加上。</p>
+<h2 id="amp-x20-静态内部类"><a href="#amp-x20-静态内部类" class="headerlink" title="&amp;#x20;静态内部类"></a>&amp;#x20;静态内部类</h2><p><strong>静态内部类特点</strong>：</p>
+<ul>
+<li>静态内部类是一种特殊的成员内部类。</li>
+<li>有static修饰，属于外部类本身的。</li>
+<li>总结：静态内部类与其他类的用法完全一样。只是访问的时候需要加上外部类.内部类。</li>
+<li><strong>拓展1</strong>:静态内部类可以直接访问外部类的静态成员。</li>
+<li><strong>拓展2</strong>:静态内部类不可以直接访问外部类的非静态成员，如果要访问需要创建外部类的对象。</li>
+<li><strong>拓展3</strong>:静态内部类中没有银行的Outer.this。</li>
+</ul>
+<p><strong>内部类的使用格式</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">外部类.内部类。</span><br></pre></td></tr></table></figure>
+
+<p><strong>静态内部类对象的创建格式</strong>：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">外部类.内部类  变量 = new  外部类.内部类构造器;</span><br></pre></td></tr></table></figure>
+
+<p><strong>调用方法的格式：</strong></p>
+<ul>
+<li>调用非静态方法的格式：先创建对象，用对象调用</li>
+<li>调用静态方法的格式：外部类名.内部类名.方法名();</li>
+</ul>
+<p><strong>案例演示</strong>：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">// 外部类：Outer01</span><br><span class="line">class Outer01&#123;</span><br><span class="line">    private static  String sc_name = &quot;黑马程序&quot;;</span><br><span class="line">    // 内部类: Inner01</span><br><span class="line">    public static class Inner01&#123;</span><br><span class="line">        // 这里面的东西与类是完全一样的。</span><br><span class="line">        private String name;</span><br><span class="line">        public Inner01(String name) &#123;</span><br><span class="line">            this.name = name;</span><br><span class="line">        &#125;</span><br><span class="line">        public void showName()&#123;</span><br><span class="line">            System.out.println(this.name);</span><br><span class="line">            // 拓展:静态内部类可以直接访问外部类的静态成员。</span><br><span class="line">            System.out.println(sc_name);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class InnerClassDemo01 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 创建静态内部类对象。</span><br><span class="line">        // 外部类.内部类  变量 = new  外部类.内部类构造器;</span><br><span class="line">        Outer01.Inner01 in  = new Outer01.Inner01(&quot;张三&quot;);</span><br><span class="line">        in.showName();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="amp-x20-局部内部类"><a href="#amp-x20-局部内部类" class="headerlink" title="&amp;#x20;局部内部类"></a>&amp;#x20;局部内部类</h2><ul>
+<li><strong>局部内部类</strong> ：定义在<strong>方法中</strong>的类。</li>
+</ul>
+<p>定义格式:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">class 外部类名 &#123;</span><br><span class="line">  数据类型 变量名;</span><br><span class="line">  </span><br><span class="line">  修饰符 返回值类型 方法名(参数列表) &#123;</span><br><span class="line">    // …</span><br><span class="line">    class 内部类 &#123;</span><br><span class="line">      // 成员变量</span><br><span class="line">      // 成员方法</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="amp-x20-匿名内部类【重点】"><a href="#amp-x20-匿名内部类【重点】" class="headerlink" title="&amp;#x20;匿名内部类【重点】"></a>&amp;#x20;匿名内部类【重点】</h2><h3 id="amp-x20-概述-2"><a href="#amp-x20-概述-2" class="headerlink" title="&amp;#x20;概述"></a>&amp;#x20;概述</h3><p><strong>匿名内部类</strong> ：是内部类的简化写法。他是一个隐含了名字的内部类。开发中，最常用到的内部类就是匿名内部类了。</p>
+<h3 id="代码格式"><a href="#代码格式" class="headerlink" title="代码格式"></a>代码格式</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">new 类名或者接口名() &#123;</span><br><span class="line">     重写方法;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>包含了：</p>
+<ul>
+<li>继承或者实现关系</li>
+<li>方法重写</li>
+<li>创建对象</li>
+</ul>
+<p>所以从语法上来讲，这个整体其实是匿名内部类对象</p>
+<h3 id="amp-x20-什么时候用到匿名内部类"><a href="#amp-x20-什么时候用到匿名内部类" class="headerlink" title="&amp;#x20;什么时候用到匿名内部类"></a>&amp;#x20;什么时候用到匿名内部类</h3><p><strong>实际上，如果我们希望定义一个只要使用一次的类，就可考虑使用匿名内部类。匿名内部类的本质作用</strong></p>
+<p><strong>是为了简化代码</strong>。</p>
+<p>最终的目的，最终只是为了调用方法，那么能不能简化一下，把以上四步合成一步呢？匿名内部类就是做这样的快捷方式。</p>
+<h3 id="amp-x20-匿名内部类前提和格式"><a href="#amp-x20-匿名内部类前提和格式" class="headerlink" title="&amp;#x20;匿名内部类前提和格式"></a>&amp;#x20;匿名内部类前提和格式</h3><p>匿名内部类必须<strong>继承一个父类</strong>或者<strong>实现一个父接口</strong>。</p>
+<p><strong>匿名内部类格式</strong></p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">new 父类名或者接口名()&#123;</span><br><span class="line">    // 方法重写</span><br><span class="line">    @Override </span><br><span class="line">    public void method() &#123;</span><br><span class="line">        // 执行语句</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="amp-x20-匿名内部类的特点"><a href="#amp-x20-匿名内部类的特点" class="headerlink" title="&amp;#x20;匿名内部类的特点"></a>&amp;#x20;匿名内部类的特点</h3><ol>
+<li>定义一个没有名字的内部类</li>
+<li>这个类实现了父类，或者父类接口</li>
+<li>匿名内部类会创建这个没有名字的类的对象</li>
+</ol>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>面向对象</title>
+    <url>/2023/05/21/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
+    <content><![CDATA[<h1 id="面相对象"><a href="#面相对象" class="headerlink" title="面相对象"></a>面相对象</h1><span id="more"></span>
+
+
+<h4 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h4><p>&amp;#x20;类的理解</p>
+<ol>
+<li>类是对现实生活中一类具有共同属性和行为的事物的抽象</li>
+<li>类是对象的数据类型，类是具有相同属性和行为的一组对象的集合</li>
+<li>简单理解：类就是对现实事物的一种描述</li>
+</ol>
+<p>&amp;#x20;类的组成</p>
+<ol>
+<li>属性：指事物的特征.</li>
+<li>行为：指事物能执行的操作.</li>
+</ol>
+<p>类和对象的关系</p>
+<p>类：类是对现实生活中一类具有共同属性和行为的事物的抽象</p>
+<p>对象：是能够看得到摸的着的真实存在的实体</p>
+<p>类的定义</p>
+<p>类的组成是由属性和行为两部分组成</p>
+<ol>
+<li>属性：在类中通过成员变量来体现</li>
+<li>行为：在类中通过成员方法来体现</li>
+</ol>
+<p>代码格式</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class 类名 &#123;</span><br><span class="line">  // 成员变量</span><br><span class="line">  变量1的数据类型 变量1；</span><br><span class="line">  变量2的数据类型 变量2;</span><br><span class="line">  …</span><br><span class="line">  // 成员方法</span><br><span class="line">  方法1;</span><br><span class="line">  方法2;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>示例:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Phone &#123;</span><br><span class="line">       String brand;</span><br><span class="line">       double price;</span><br><span class="line">       public void call()&#123;</span><br><span class="line">           System.out.println(&quot;打电话&quot;);</span><br><span class="line">       &#125;</span><br><span class="line">    public void playGame()&#123;</span><br><span class="line">        System.out.println(&quot;玩游戏&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>对象</p>
+<p>代码格式</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">类名 对象名 = new 类名();</span><br></pre></td></tr></table></figure>
+
+<p>调用成员格式:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">对象名.成员变量</span><br><span class="line">对象名.成员方法();</span><br></pre></td></tr></table></figure>
+
+<p>示例:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class PhoneTest &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Phone p=new Phone();</span><br><span class="line">        p.brand=&quot;小米&quot;;</span><br><span class="line">        p.price=1010;</span><br><span class="line">        System.out.println(p.brand);</span><br><span class="line">        System.out.println(p.price);</span><br><span class="line">        p.call();</span><br><span class="line">        p.playGame();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/image_zwABVzKURZ.png"></p>
+<h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3><ol>
+<li><p>封装概述 是面向对象三大特征之一（封装，继承，多态）</p>
+<p><strong>对象代表什么，就得封装对应的数据，并提供数据对应的行为</strong></p>
+</li>
+<li><p>封装代码实现 将类的某些信息隐藏在类内部，不允许外部程序直接访问，而是通过该类提供的方法来实现对隐藏信息的操作和访问 .成员变量private</p>
+</li>
+</ol>
+<h3 id="private关键字"><a href="#private关键字" class="headerlink" title="private关键字"></a>private关键字</h3><p>private是一个修饰符，可以用来修饰成员（成员变量，成员方法）</p>
+<ul>
+<li>被private修饰的成员，只能在本类进行访问，针对private修饰的成员变量，如果需要被其他类使用，提供相应的操作<ul>
+<li>提供“get变量名()”方法，用于获取成员变量的值，方法用public修饰</li>
+<li>提供“set变量名(参数)”方法，用于设置成员变量的值，方法用public修饰</li>
+</ul>
+</li>
+</ul>
+<p>示例</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Student &#123;</span><br><span class="line">    private String name;</span><br><span class="line">    private int age;</span><br><span class="line">    private String gender;</span><br><span class="line">    public void setName(String n)&#123;</span><br><span class="line">        name=n;</span><br><span class="line">    &#125;</span><br><span class="line">    public String getName()&#123;</span><br><span class="line">        return name;</span><br><span class="line">    &#125;</span><br><span class="line">    public void setAge(int a)&#123;</span><br><span class="line">        if(a&gt;=18&amp;&amp;a&lt;=50)&#123;</span><br><span class="line">           age =a;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            System.out.println(&quot;非法参数&quot;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    public int getAge()&#123;</span><br><span class="line">        return age;</span><br><span class="line">    &#125;</span><br><span class="line">    public void setGender(String g )&#123;</span><br><span class="line">        gender=g ;</span><br><span class="line">    &#125;</span><br><span class="line">    public String getGender()&#123;</span><br><span class="line">        return gender;</span><br><span class="line">    &#125;</span><br><span class="line">    public void sleep() &#123;</span><br><span class="line">        System.out.println(&quot;在睡觉&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void learn() &#123;</span><br><span class="line">        System.out.println(&quot;在学习&quot;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class StudentTest &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Student s1=new Student();</span><br><span class="line">      s1.setName(&quot;我到后&quot;);</span><br><span class="line">      s1.setAge(18);</span><br><span class="line">      s1.setGender(&quot;男&quot;);</span><br><span class="line">        System.out.println(s1.getName());</span><br><span class="line">        System.out.println(s1.getAge());</span><br><span class="line">        System.out.println(s1.getGender());</span><br><span class="line">        s1.sleep();</span><br><span class="line">        s1.learn();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/image_zfYjKA84hT.png"></p>
+<h3 id="this关键字"><a href="#this关键字" class="headerlink" title="this关键字"></a>this关键字</h3><p>this修饰的变量用于指代成员变量，其主要作用是（区分局部变量和成员变量的重名问题）</p>
+<ol>
+<li>方法的形参如果与成员变量同名，不带this修饰的变量指的是形参，而不是成员变量</li>
+<li>方法的形参没有与成员变量同名，不带this修饰的变量指的是成员变量</li>
+</ol>
+<p>示例</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Student &#123;</span><br><span class="line">    private String name;</span><br><span class="line">    private int age;</span><br><span class="line"></span><br><span class="line">    public void setName(String name) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getName() &#123;</span><br><span class="line">        return name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setAge(int age) &#123;</span><br><span class="line">        this.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public int getAge() &#123;</span><br><span class="line">        return age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void show() &#123;</span><br><span class="line">        System.out.println(name + &quot;,&quot; + age);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><p>构造方法是一种特殊的方法</p>
+<ul>
+<li>作用：创建对象 Student stu &#x3D; <strong>new Student();</strong></li>
+<li>代码格式</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class 类名&#123;</span><br><span class="line">​        修饰符 类名( 参数 ) &#123;</span><br><span class="line">​        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>功能：主要是完成对象数据的初始化</li>
+<li>示例代码：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Student &#123;</span><br><span class="line">    private String name;</span><br><span class="line">    private int age;</span><br><span class="line">    public Student() &#123;</span><br><span class="line">        System.out.println(&quot;无参构造方法&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public void show() &#123;</span><br><span class="line">        System.out.println(name + &quot;,&quot; + age);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class StudentDemo &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Student s = new Student();</span><br><span class="line">        s.show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="标准类"><a href="#标准类" class="headerlink" title="标准类"></a>标准类</h4><p>① 类名需要见名知意</p>
+<p>② 成员变量使用private修饰</p>
+<p>③ 提供至少两个构造方法</p>
+<ul>
+<li>无参构造方法</li>
+<li>带全部参数的构造方法</li>
+</ul>
+<p>④ get和set方法</p>
+<p>提供每一个成员变量对应的setXxx()&#x2F;getXxx()</p>
+<p>⑤ 如果还有其他行为，也需要写上</p>
+<h3 id="三种情况的对象内存图"><a href="#三种情况的对象内存图" class="headerlink" title="三种情况的对象内存图"></a>三种情况的对象内存图</h3><p><img src="/2023/05/21/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/image_oiFgC3QonI.png"></p>
+<p><img src="/2023/05/21/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/image_2nh9ZxTwjN.png"></p>
+<p><img src="/2023/05/21/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/image_oOSORKa_ur.png"></p>
+<p>总结:</p>
+<p>多个对象在堆内存中，都有不同的内存划分，成员变量存储在各自的内存区域中，成员方法多个对象共用的一份</p>
+<h3 id="成员变量和局部变量"><a href="#成员变量和局部变量" class="headerlink" title="成员变量和局部变量"></a>成员变量和局部变量</h3><ol>
+<li>类中位置不同：成员变量（类中方法外）局部变量（方法内部或方法声明上）</li>
+<li>内存中位置不同：成员变量（堆内存）局部变量（栈内存）</li>
+<li>生命周期不同：成员变量（随着对象的存在而存在，随着对象的消失而消失）局部变量（随着方法的调用而存在，醉着方法的调用完毕而消失）</li>
+<li>初始化值不同：成员变量（有默认初始化值）局部变量（没有默认初始化值，必须先定义，赋值才能使用）</li>
+</ol>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+</search>

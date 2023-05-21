@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="字符串">
+<meta property="og:type" content="article">
+<meta property="og:title" content="字符串">
+<meta property="og:url" content="http://example.com/2023/05/21/%E5%AD%97%E7%AC%A6%E4%B8%B2/index.html">
+<meta property="og:site_name" content="tj1me blog">
+<meta property="og:description" content="字符串">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2023/05/21/%E5%AD%97%E7%AC%A6%E4%B8%B2/image_k9F_suWkdV.png">
+<meta property="og:image" content="http://example.com/2023/05/21/%E5%AD%97%E7%AC%A6%E4%B8%B2/image_8YBSvlKGN-.png">
+<meta property="article:published_time" content="2023-05-21T13:57:41.000Z">
+<meta property="article:modified_time" content="2023-05-21T14:10:55.084Z">
+<meta property="article:author" content="tj1me">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/05/21/%E5%AD%97%E7%AC%A6%E4%B8%B2/image_k9F_suWkdV.png">
+
+
+<link rel="canonical" href="http://example.com/2023/05/21/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/05/21/%E5%AD%97%E7%AC%A6%E4%B8%B2/","path":"2023/05/21/字符串/","title":"字符串"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>字符串 | tj1me blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="tj1me blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">tj1me blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">1.</span> <span class="nav-text">字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#API"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">API</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#string%E7%B1%BB"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">string类</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%AF%94%E8%BE%83"><span class="nav-number">1.0.1.</span> <span class="nav-text">字符串的比较</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A1%88%E4%BE%8B"><span class="nav-number">1.1.</span> <span class="nav-text">案例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#StringBuilder"><span class="nav-number">1.2.</span> <span class="nav-text">StringBuilder</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ArrayList"><span class="nav-number">1.3.</span> <span class="nav-text">ArrayList</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E5%92%8C%E6%95%B0%E7%BB%84%E7%9A%84%E4%BC%98%E5%8A%BF%E5%AF%B9%E6%AF%94%EF%BC%9A"><span class="nav-number">1.3.1.</span> <span class="nav-text">集合和数组的优势对比：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ArrayList%E7%B1%BB%E6%A6%82%E8%BF%B0"><span class="nav-number">1.3.2.</span> <span class="nav-text">ArrayList类概述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">构造方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-2-%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">1.2.2 成员方法</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="tj1me"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">tj1me</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/tj1me" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;tj1me" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/21/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="tj1me">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="tj1me blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="字符串 | tj1me blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          字符串
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-05-21 21:57:41 / 修改时间：22:10:55" itemprop="dateCreated datePublished" datetime="2023-05-21T21:57:41+08:00">2023-05-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><span id="more"></span>
+
+<h4 id="API"><a href="#API" class="headerlink" title="API"></a>API</h4><p>1.什么是API</p>
+<p>API (Application Programming Interface) ：应用程序编程接口</p>
+<p>&amp;#x20;  2.java中的API&amp;#x20;</p>
+<p>指的就是 JDK 中提供的各种功能的 Java类，这些类将底层的实现封装了起来.</p>
+<h4 id="string类"><a href="#string类" class="headerlink" title="string类"></a>string类</h4><p>1.概述:String 类代表字符串，Java 程序中的所有字符串文字（例如“abc”）都被实现为此类的实例。也就是说，Java 程序中所有的双引号字符串，都是 String 类的对象。String 类在 java.lang 包下，所以使用的时候不需要导包！</p>
+<p>&amp;#x20;    2.特点:</p>
+<ol>
+<li>字符串不可变，它们的值在创建后不能被更改</li>
+<li>虽然 String 的值是不可变的，但是它们可以被共享</li>
+<li>字符串效果上相当于字符数组( char[] )，但是底层原理是字节数组( byte[] )</li>
+</ol>
+<p>3.构造方法</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>String s &#x3D; “abc”;</td>
+<td>直接赋值的方式创建字符串对象，内容就是abc</td>
+</tr>
+<tr>
+<td>public String()</td>
+<td>创建一个空白字符串对象，不含有任何内容</td>
+</tr>
+<tr>
+<td>public String(char[] chs)</td>
+<td>根据字符数组的内容，来创建字符串对象</td>
+</tr>
+<tr>
+<td>public String(byte[] bys)</td>
+<td>根据字节数组的内容，来创建字符串对象</td>
+</tr>
+</tbody></table>
+<p>示例代码:</p>
+<p>1.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//String s = “abc”;  直接赋值的方式创建字符串对象，内容就是abc</span><br><span class="line">        String s1 = &quot;abc&quot;;</span><br><span class="line">        System.out.println(&quot;s1:&quot; + s1);</span><br></pre></td></tr></table></figure>
+
+<p>2.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//public String()：创建一个空白字符串对象，不含有任何内容</span><br><span class="line">       String s2 = new String();</span><br><span class="line">       System.out.println(&quot;s2:&quot; + s2);</span><br></pre></td></tr></table></figure>
+
+<p>3.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//public String(char[] chs)：根据字符数组的内容，来创建字符串对象</span><br><span class="line">       char[] chs = &#123;&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;&#125;;</span><br><span class="line">       String s3 = new String(chs);</span><br><span class="line">       System.out.println(&quot;s3:&quot; + s3);</span><br></pre></td></tr></table></figure>
+
+<p>4.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//public String(byte[] bys)：根据字节数组的内容，来创建字符串对象</span><br><span class="line">        byte[] bys = &#123;97, 98, 99&#125;;</span><br><span class="line">        String s4 = new String(bys);</span><br><span class="line">        System.out.println(&quot;s4:&quot; + s4);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>创建字符串对象的两种方式的区别:</p>
+<ol>
+<li><p>通过构造方法创建</p>
+<p>通过 new 创建的字符串对象，每一次 new 都会申请一个内存空间，虽然内容相同，但是地址值不同</p>
+</li>
+<li><p>直接赋值方式创建</p>
+<p>以“”方式给出的字符串，只要字符序列相同(顺序和大小写)，无论在程序代码中出现几次，JVM 都只会建立一个 String 对象，并在字符串池中维护</p>
+</li>
+</ol>
+<h3 id="字符串的比较"><a href="#字符串的比较" class="headerlink" title="字符串的比较"></a>字符串的比较</h3><p>1.&#x3D;&#x3D;的作用</p>
+<ul>
+<li>比较基本数据类型：比较的是具体的值</li>
+<li>比较引用数据类型：比较的是对象地址值</li>
+</ul>
+<p>2.equals方法的作用</p>
+<p>基本代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">public boolean equals(String s)     </span><br><span class="line">比较两个字符串内容是否相同、区分大小写</span><br></pre></td></tr></table></figure>
+
+<p>示例:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">  public static void main(String[] args) &#123;</span><br><span class="line">        char[] chs = &#123;&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;&#125;;</span><br><span class="line">        String s1 = new String(chs);</span><br><span class="line">        String s2 = new String(chs);</span><br><span class="line">        String s3 = &quot;abc&quot;;</span><br><span class="line">        String s4 = &quot;abc&quot;;</span><br><span class="line">        //比较字符串对象地址是否相同</span><br><span class="line">        System.out.println(s1 == s2);</span><br><span class="line">        System.out.println(s1 == s3);</span><br><span class="line">        System.out.println(s3 == s4);</span><br><span class="line">        System.out.println(&quot;--------&quot;);</span><br><span class="line">        //比较字符串内容是否相同</span><br><span class="line">        System.out.println(s1.equals(s2));</span><br><span class="line">        System.out.println(s1.equals(s3));</span><br><span class="line">        System.out.println(s3.equals(s4));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E5%AD%97%E7%AC%A6%E4%B8%B2/image_k9F_suWkdV.png"></p>
+<h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><p>用户登录:代码示例</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">       String rightUsername = &quot;qwer&quot;;</span><br><span class="line">       String rightPassword = &quot;1234&quot;;</span><br><span class="line">       for (int i = 0; i &lt; 3; i++) &#123;//0 1 2</span><br><span class="line">           Scanner sc = new Scanner(System.in);</span><br><span class="line">           System.out.println(&quot;请输入用户名&quot;);</span><br><span class="line">           String username = sc.next();</span><br><span class="line">           System.out.println(&quot;请输入密码&quot;);</span><br><span class="line">           String password = sc.next();</span><br><span class="line">           //判断比较</span><br><span class="line">           if (username.equals(rightUsername) &amp;&amp; password.equals(rightPassword)) &#123;</span><br><span class="line">               System.out.println(&quot;登录成功&quot;);</span><br><span class="line">               break;</span><br><span class="line">           &#125; else &#123;</span><br><span class="line">               if(i == 2)&#123;</span><br><span class="line">                   System.out.println(&quot;账户&quot; + username + &quot;被锁定&quot;);</span><br><span class="line">               &#125;else&#123;</span><br><span class="line">                   //不是最后一次机会</span><br><span class="line">                   System.out.println(&quot;用户名或密码错误，登录失败,还剩下&quot; + (2 - i) + &quot;次机会&quot;);//2 1 0</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="/2023/05/21/%E5%AD%97%E7%AC%A6%E4%B8%B2/image_8YBSvlKGN-.png"></p>
+<h2 id="StringBuilder"><a href="#StringBuilder" class="headerlink" title="StringBuilder"></a>StringBuilder</h2><p>StringBuilder 可以看成是一个容器，创建之后里面的内容是可变的。</p>
+<p>当我们在拼接字符串和反转字符串的时候会使用到</p>
+<p>示例:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">        StringBuilder sc = new StringBuilder(&quot;abc&quot;);</span><br><span class="line">        sb.reverse();</span><br><span class="line">        int len = sb.length();</span><br><span class="line">        System.out.println(len);</span><br><span class="line">        System.out.println(sc);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h2><h3 id="集合和数组的优势对比："><a href="#集合和数组的优势对比：" class="headerlink" title="集合和数组的优势对比："></a>集合和数组的优势对比：</h3><ol>
+<li>长度可变</li>
+<li>添加数据的时候不需要考虑索引，默认将数据添加到末尾</li>
+</ol>
+<h3 id="ArrayList类概述"><a href="#ArrayList类概述" class="headerlink" title="ArrayList类概述"></a>ArrayList类概述</h3><ul>
+<li><p>什么是集合</p>
+<p>提供一种存储空间可变的存储模型，存储的数据容量可以发生改变</p>
+</li>
+<li><p>ArrayList集合的特点</p>
+<p>长度可以变化，只能存储引用数据类型。</p>
+</li>
+<li><p>泛型的使用</p>
+<p>用于约束集合中存储元素的数据类型</p>
+</li>
+</ul>
+<h4 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h4><table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public ArrayList()</td>
+<td>创建一个空的集合对象</td>
+</tr>
+</tbody></table>
+<h4 id="1-2-2-成员方法"><a href="#1-2-2-成员方法" class="headerlink" title="1.2.2 成员方法"></a>1.2.2 成员方法</h4><table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public boolean add(要添加的元素)</td>
+<td>将指定的元素追加到此集合的末尾</td>
+</tr>
+<tr>
+<td>public boolean remove(要删除的元素)</td>
+<td>删除指定元素,返回值表示是否删除成功</td>
+</tr>
+<tr>
+<td>public E remove(int index)</td>
+<td>删除指定索引处的元素，返回被删除的元素</td>
+</tr>
+<tr>
+<td>public E set(int index,E element)</td>
+<td>修改指定索引处的元素，返回被修改的元素</td>
+</tr>
+<tr>
+<td>public E get(int index)</td>
+<td>返回指定索引处的元素</td>
+</tr>
+<tr>
+<td>public int size()</td>
+<td>返回集合中的元素的个数</td>
+</tr>
+</tbody></table>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/05/21/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="prev" title="面向对象">
+                  <i class="fa fa-chevron-left"></i> 面向对象
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/05/21/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/" rel="next" title="面向对象进阶">
+                  面向对象进阶 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2023.5.20 – 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">tj1me</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org//" rel="noopener" target="_blank">NexT.undefined</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
