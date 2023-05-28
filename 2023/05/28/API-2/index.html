@@ -29,7 +29,7 @@
 <meta property="og:description" content="API（2）">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-05-28T06:31:43.000Z">
-<meta property="article:modified_time" content="2023-05-28T06:42:37.187Z">
+<meta property="article:modified_time" content="2023-05-28T07:14:40.736Z">
 <meta property="article:author" content="tj1me">
 <meta name="twitter:card" content="summary">
 
@@ -142,7 +142,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#API%EF%BC%882%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">API（2）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">1.0.1.</span> <span class="nav-text">正则表达式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F-%E5%AD%97%E7%AC%A6%E7%B1%BB"><span class="nav-number">1.1.</span> <span class="nav-text">正则表达式-字符类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">1.2.</span> <span class="nav-text">正则表达式-逻辑运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F-%E9%A2%84%E5%AE%9A%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="nav-number">1.3.</span> <span class="nav-text">正则表达式-预定义字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F-%E6%95%B0%E9%87%8F%E8%AF%8D"><span class="nav-number">1.4.</span> <span class="nav-text">正则表达式-数量词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String%E7%B1%BB%E7%9A%84replaceAll%E6%96%B9%E6%B3%95%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">1.5.</span> <span class="nav-text">String类的replaceAll方法中使用正则表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F-%E5%88%86%E7%BB%84%E6%8B%AC%E5%8F%B7"><span class="nav-number">1.6.</span> <span class="nav-text">正则表达式-分组括号( )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%BD%E7%95%A5%E5%A4%A7%E5%B0%8F%E5%86%99%E7%9A%84%E5%86%99%E6%B3%95"><span class="nav-number">1.7.</span> <span class="nav-text">忽略大小写的写法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%9E%E6%8D%95%E8%8E%B7%E5%88%86%E7%BB%84"><span class="nav-number">1.8.</span> <span class="nav-text">非捕获分组</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#API%EF%BC%882%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">API（2）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">1.0.1.</span> <span class="nav-text">正则表达式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F-%E5%AD%97%E7%AC%A6%E7%B1%BB"><span class="nav-number">1.1.</span> <span class="nav-text">正则表达式-字符类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">1.2.</span> <span class="nav-text">正则表达式-逻辑运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F-%E9%A2%84%E5%AE%9A%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="nav-number">1.3.</span> <span class="nav-text">正则表达式-预定义字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F-%E6%95%B0%E9%87%8F%E8%AF%8D"><span class="nav-number">1.4.</span> <span class="nav-text">正则表达式-数量词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String%E7%B1%BB%E7%9A%84replaceAll%E6%96%B9%E6%B3%95%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">1.5.</span> <span class="nav-text">String类的replaceAll方法中使用正则表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F-%E5%88%86%E7%BB%84%E6%8B%AC%E5%8F%B7"><span class="nav-number">1.6.</span> <span class="nav-text">正则表达式-分组括号( )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%BD%E7%95%A5%E5%A4%A7%E5%B0%8F%E5%86%99%E7%9A%84%E5%86%99%E6%B3%95"><span class="nav-number">1.7.</span> <span class="nav-text">忽略大小写的写法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%9E%E6%8D%95%E8%8E%B7%E5%88%86%E7%BB%84"><span class="nav-number">1.8.</span> <span class="nav-text">非捕获分组</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Date%E7%B1%BB"><span class="nav-number">2.</span> <span class="nav-text">Date类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Date%E6%A6%82%E8%BF%B0"><span class="nav-number">2.1.</span> <span class="nav-text">Date概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Date%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">2.2.</span> <span class="nav-text">Date常用方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SimpleDateFormat%E7%B1%BB"><span class="nav-number">3.</span> <span class="nav-text">SimpleDateFormat类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="nav-number">3.1.</span> <span class="nav-text">构造方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%BC%E5%BC%8F%E8%A7%84%E5%88%99"><span class="nav-number">3.2.</span> <span class="nav-text">格式规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">3.3.</span> <span class="nav-text">常用方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Calendar%E7%B1%BB"><span class="nav-number">4.</span> <span class="nav-text">Calendar类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">4.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95-1"><span class="nav-number">4.2.</span> <span class="nav-text">常用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#get%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B"><span class="nav-number">4.3.</span> <span class="nav-text">get方法示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#set%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B%EF%BC%9A"><span class="nav-number">4.4.</span> <span class="nav-text">set方法示例：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#add%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B%EF%BC%9A"><span class="nav-number">4.5.</span> <span class="nav-text">add方法示例：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JDK8%E6%97%B6%E9%97%B4%E7%9B%B8%E5%85%B3%E7%B1%BB"><span class="nav-number">5.</span> <span class="nav-text">JDK8时间相关类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8C%85%E8%A3%85%E7%B1%BB"><span class="nav-number">6.</span> <span class="nav-text">包装类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0-1"><span class="nav-number">6.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Integer%E7%B1%BB"><span class="nav-number">6.2.</span> <span class="nav-text">Integer类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A3%85%E7%AE%B1%E4%B8%8E%E6%8B%86%E7%AE%B1"><span class="nav-number">6.3.</span> <span class="nav-text">装箱与拆箱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E8%A3%85%E7%AE%B1%E4%B8%8E%E8%87%AA%E5%8A%A8%E6%8B%86%E7%AE%B1"><span class="nav-number">6.4.</span> <span class="nav-text">自动装箱与自动拆箱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="nav-number">6.5.</span> <span class="nav-text">基本类型与字符串之间的转换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E4%B8%BAString"><span class="nav-number">6.5.1.</span> <span class="nav-text">基本类型转换为String</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String%E8%BD%AC%E6%8D%A2%E6%88%90%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="nav-number">6.5.2.</span> <span class="nav-text">String转换成基本类型</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -157,7 +157,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -230,7 +230,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-05-28 14:31:43 / 修改时间：14:42:37" itemprop="dateCreated datePublished" datetime="2023-05-28T14:31:43+08:00">2023-05-28</time>
+      <time title="创建时间：2023-05-28 14:31:43 / 修改时间：15:14:40" itemprop="dateCreated datePublished" datetime="2023-05-28T14:31:43+08:00">2023-05-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -256,14 +256,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>7.7k</span>
+      <span>14k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>7 分钟</span>
+      <span>13 分钟</span>
     </span>
 </div>
 
@@ -350,6 +350,302 @@
 <h2 id="非捕获分组"><a href="#非捕获分组" class="headerlink" title="非捕获分组"></a>非捕获分组</h2><p>非捕获分组：分组之后不需要再用本组数据，仅仅是把数据括起来。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//身份证号码的简易正则表达式</span></span><br><span class="line"><span class="comment">//非捕获分组:仅仅是把数据括起来</span></span><br><span class="line"><span class="comment">//特点:不占用组号</span></span><br><span class="line"><span class="comment">//(?:) (?=) (?!)都是非捕获分组//更多的使用第一个</span></span><br><span class="line"><span class="comment">//String regex1 =&quot;[1-9]\\d&#123;16&#125;(?:\\d|x|x)\\1&quot;;</span></span><br><span class="line"><span class="type">String</span> <span class="variable">regex2</span> <span class="operator">=</span><span class="string">&quot;[1-9]\\d&#123;16&#125;(\\d Xx)\\1&quot;</span>;</span><br><span class="line"><span class="comment">//^([01]\d|2[0-3]):[0-5]\d:[@-5]\d$</span></span><br><span class="line"></span><br><span class="line">System.out.println(<span class="string">&quot;41080119930228457x&quot;</span>.matches(regex2));</span><br></pre></td></tr></table></figure>
 
+
+
+<h1 id="Date类"><a href="#Date类" class="headerlink" title="Date类"></a>Date类</h1><h2 id="Date概述"><a href="#Date概述" class="headerlink" title="Date概述"></a>Date概述</h2><p>java.util.Date`类 表示特定的瞬间，精确到毫秒。</p>
+<p>继续查阅Date类的描述，发现Date拥有多个构造函数，只是部分已经过时，我们重点看以下两个构造函数</p>
+<ul>
+<li><code>public Date()</code>：从运行程序的此时此刻到时间原点经历的毫秒值,转换成Date对象，分配Date对象并初始化此对象，以表示分配它的时间（精确到毫秒）。</li>
+<li><code>public Date(long date)</code>：将指定参数的毫秒值date,转换成Date对象，分配Date对象并初始化此对象，以表示自从标准基准时间（称为“历元（epoch）”，即1970年1月1日00:00:00 GMT）以来的指定毫秒数。</li>
+</ul>
+<blockquote>
+<p>tips: 由于中国处于东八区（GMT+08:00）是比世界协调时间&#x2F;格林尼治时间（GMT）快8小时的时区，当格林尼治标准时间为0:00时，东八区的标准时间为08:00。</p>
+</blockquote>
+<p>简单来说：使用无参构造，可以自动设置当前系统时间的毫秒时刻；指定long类型的构造参数，可以自定义毫秒时刻。例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 创建日期对象，把当前的时间</span></span><br><span class="line">System.out.println(<span class="keyword">new</span> <span class="title class_">Date</span>());</span><br><span class="line"><span class="comment">// 创建日期对象，把当前的毫秒值转成日期对象</span></span><br><span class="line">System.out.println(<span class="keyword">new</span> <span class="title class_">Date</span>(<span class="number">0L</span>));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>输出为：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Sat May <span class="number">27</span> <span class="number">19</span>:08:<span class="number">42</span> GMT+08:<span class="number">00</span> <span class="number">2023</span></span><br><span class="line">Thu Jan <span class="number">01</span> 08:<span class="number">00</span>:<span class="number">00</span> GMT+08:<span class="number">00</span> <span class="number">1970</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>tips:在使用println方法时，会自动调用Date类中的toString方法。Date类对Object类中的toString方法进行了覆盖重写，所以结果为指定格式的字符串。</p>
+</blockquote>
+<h2 id="Date常用方法"><a href="#Date常用方法" class="headerlink" title="Date常用方法"></a>Date常用方法</h2><p>Date类中的多数方法已经过时，常用的方法有：</p>
+<ul>
+<li><code>public long getTime()</code> 把日期对象转换成对应的时间毫秒值。</li>
+<li><code>public void setTime(long time)</code> 把方法参数给定的毫秒值设置给日期对象</li>
+</ul>
+<blockquote>
+<p>小结：Date表示特定的时间瞬间，我们可以使用Date对象对时间进行操作。</p>
+</blockquote>
+<h1 id="SimpleDateFormat类"><a href="#SimpleDateFormat类" class="headerlink" title="SimpleDateFormat类"></a>SimpleDateFormat类</h1><p><code>java.text.SimpleDateFormat</code> 是日期&#x2F;时间格式化类，我们通过这个类可以帮我们完成日期和文本之间的转换,也就是可以在Date对象与String对象之间进行来回转换。</p>
+<ul>
+<li><strong>格式化</strong>：按照指定的格式，把Date对象转换为String对象。</li>
+<li><strong>解析</strong>：按照指定的格式，把String对象转换为Date对象。</li>
+</ul>
+<h2 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h2><p>由于DateFormat为抽象类，不能直接使用，所以需要常用的子类<code>java.text.SimpleDateFormat</code>。这个类需要一个模式（格式）来指定格式化或解析的标准。构造方法为：</p>
+<ul>
+<li><code>public SimpleDateFormat(String pattern)</code>：用给定的模式和默认语言环境的日期格式符号构造SimpleDateFormat。参数pattern是一个字符串，代表日期时间的自定义格式。</li>
+</ul>
+<h2 id="格式规则"><a href="#格式规则" class="headerlink" title="格式规则"></a>格式规则</h2><p>常用的格式规则为：</p>
+<table>
+<thead>
+<tr>
+<th>标识字母（区分大小写）</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>y</td>
+<td>年</td>
+</tr>
+<tr>
+<td>M</td>
+<td>月</td>
+</tr>
+<tr>
+<td>d</td>
+<td>日</td>
+</tr>
+<tr>
+<td>H</td>
+<td>时</td>
+</tr>
+<tr>
+<td>m</td>
+<td>分</td>
+</tr>
+<tr>
+<td>s</td>
+<td>秒</td>
+</tr>
+</tbody></table>
+<h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><p>DateFormat类的常用方法有：</p>
+<ul>
+<li><code>public String format(Date date)</code>：将Date对象格式化为字符串。</li>
+<li><code>public Date parse(String source)</code>：将字符串解析为Date对象。</li>
+</ul>
+<blockquote>
+<p>小结：DateFormat可以将Date对象和字符串相互转换。</p>
+</blockquote>
+<h1 id="Calendar类"><a href="#Calendar类" class="headerlink" title="Calendar类"></a>Calendar类</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+<li>java.util.Calendar类表示一个“日历类”，可以进行日期运算。它是一个抽象类，不能创建对象，我们可以使用它的子类：java.util.GregorianCalendar类。</li>
+<li>有两种方式可以获取GregorianCalendar对象：<ul>
+<li>直接创建GregorianCalendar对象；</li>
+<li>通过Calendar的静态方法getInstance()方法获取GregorianCalendar对象【本次课使用】</li>
+</ul>
+</li>
+</ul>
+<h2 id="常用方法-1"><a href="#常用方法-1" class="headerlink" title="常用方法"></a>常用方法</h2><table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public static Calendar getInstance()</td>
+<td>获取一个它的子类GregorianCalendar对象。</td>
+</tr>
+<tr>
+<td>public int get(int field)</td>
+<td>获取某个字段的值。field参数表示获取哪个字段的值，&amp;#xA;可以使用Calender中定义的常量来表示：&amp;#xA;Calendar.YEAR : 年&amp;#xA;Calendar.MONTH ：月&amp;#xA;Calendar.DAY_OF_MONTH：月中的日期&amp;#xA;Calendar.HOUR：小时&amp;#xA;Calendar.MINUTE：分钟&amp;#xA;Calendar.SECOND：秒&amp;#xA;Calendar.DAY_OF_WEEK：星期</td>
+</tr>
+<tr>
+<td>public void set(int field,int value)</td>
+<td>设置某个字段的值</td>
+</tr>
+<tr>
+<td>public void add(int field,int amount)</td>
+<td>为某个字段增加&#x2F;减少指定的值</td>
+</tr>
+</tbody></table>
+<h2 id="get方法示例"><a href="#get方法示例" class="headerlink" title="get方法示例"></a>get方法示例</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">    <span class="type">Calendar</span> <span class="variable">instance</span> <span class="operator">=</span> Calendar.getInstance();<span class="comment">//获取子类对象</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//2.打印子类对象</span></span><br><span class="line">    System.out.println(instance);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//3.获取属性</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">year</span> <span class="operator">=</span> instance.get(Calendar.YEAR);</span><br><span class="line">    <span class="type">int</span> <span class="variable">month</span> <span class="operator">=</span> instance.get(Calendar.MONTH) + <span class="number">1</span>;<span class="comment">//Calendar的月份值是0-11</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">day</span> <span class="operator">=</span> instance.get(Calendar.DAY_OF_MONTH);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> <span class="variable">hour</span> <span class="operator">=</span> instance.get(Calendar.HOUR);</span><br><span class="line">    <span class="type">int</span> <span class="variable">minute</span> <span class="operator">=</span> instance.get(Calendar.MINUTE);</span><br><span class="line">    <span class="type">int</span> <span class="variable">second</span> <span class="operator">=</span> instance.get(Calendar.SECOND);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> <span class="variable">week</span> <span class="operator">=</span> instance.get(Calendar.DAY_OF_WEEK);<span class="comment">//返回值范围：1--7，分别表示：&quot;星期日&quot;,&quot;星期一&quot;,&quot;星期二&quot;,...,&quot;星期六&quot;</span></span><br><span class="line"></span><br><span class="line">    System.out.println(year + <span class="string">&quot;年&quot;</span> + month + <span class="string">&quot;月&quot;</span> + day + <span class="string">&quot;日&quot;</span> + </span><br><span class="line">                         hour + <span class="string">&quot;:&quot;</span> + minute + <span class="string">&quot;:&quot;</span> + second);</span><br><span class="line">    System.out.println(getWeek(week));</span><br><span class="line"></span><br><span class="line"><span class="comment">//查表法，查询星期几</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">getWeek</span><span class="params">(<span class="type">int</span> w)</span> &#123;<span class="comment">//w = 1 --- 7</span></span><br><span class="line">    <span class="comment">//做一个表(数组)</span></span><br><span class="line">    String[] weekArray = &#123;<span class="string">&quot;星期日&quot;</span>, <span class="string">&quot;星期一&quot;</span>, <span class="string">&quot;星期二&quot;</span>, <span class="string">&quot;星期三&quot;</span>, <span class="string">&quot;星期四&quot;</span>, <span class="string">&quot;星期五&quot;</span>, <span class="string">&quot;星期六&quot;</span>&#125;;</span><br><span class="line">    <span class="comment">//            索引      [0]      [1]       [2]      [3]       [4]      [5]      [6]</span></span><br><span class="line">    <span class="comment">//查表</span></span><br><span class="line">    <span class="keyword">return</span> weekArray[w - <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="set方法示例："><a href="#set方法示例：" class="headerlink" title="set方法示例："></a>set方法示例：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="type">Calendar</span> <span class="variable">c1</span> <span class="operator">=</span> Calendar.getInstance();<span class="comment">//获取当前日期</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//计算班长出生那天是星期几(假如班长出生日期为：1998年3月18日)</span></span><br><span class="line">c1.set(Calendar.YEAR, <span class="number">1998</span>);</span><br><span class="line">c1.set(Calendar.MONTH, <span class="number">3</span> - <span class="number">1</span>);<span class="comment">//转换为Calendar内部的月份值</span></span><br><span class="line">c1.set(Calendar.DAY_OF_MONTH, <span class="number">18</span>);</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="variable">w</span> <span class="operator">=</span> c1.get(Calendar.DAY_OF_WEEK);</span><br><span class="line">System.out.println(<span class="string">&quot;班长出生那天是：&quot;</span> + getWeek(w));</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//查表法，查询星期几</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">getWeek</span><span class="params">(<span class="type">int</span> w)</span> &#123;<span class="comment">//w = 1 --- 7</span></span><br><span class="line">    <span class="comment">//做一个表(数组)</span></span><br><span class="line">    String[] weekArray = &#123;<span class="string">&quot;星期日&quot;</span>, <span class="string">&quot;星期一&quot;</span>, <span class="string">&quot;星期二&quot;</span>, <span class="string">&quot;星期三&quot;</span>, <span class="string">&quot;星期四&quot;</span>, <span class="string">&quot;星期五&quot;</span>, <span class="string">&quot;星期六&quot;</span>&#125;;</span><br><span class="line">    <span class="comment">//            索引      [0]      [1]       [2]      [3]       [4]      [5]      [6]</span></span><br><span class="line">    <span class="comment">//查表</span></span><br><span class="line">    <span class="keyword">return</span> weekArray[w - <span class="number">1</span>];</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="add方法示例："><a href="#add方法示例：" class="headerlink" title="add方法示例："></a>add方法示例：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    <span class="comment">//计算200天以后是哪年哪月哪日，星期几？</span></span><br><span class="line"><span class="type">Calendar</span> <span class="variable">c2</span> <span class="operator">=</span> Calendar.getInstance();<span class="comment">//获取当前日期</span></span><br><span class="line">    c2.add(Calendar.DAY_OF_MONTH, <span class="number">200</span>);<span class="comment">//日期加200</span></span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> <span class="variable">y</span> <span class="operator">=</span> c2.get(Calendar.YEAR);</span><br><span class="line">    <span class="type">int</span> <span class="variable">m</span> <span class="operator">=</span> c2.get(Calendar.MONTH) + <span class="number">1</span>;<span class="comment">//转换为实际的月份</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">d</span> <span class="operator">=</span> c2.get(Calendar.DAY_OF_MONTH);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> <span class="variable">wk</span> <span class="operator">=</span> c2.get(Calendar.DAY_OF_WEEK);</span><br><span class="line">    System.out.println(<span class="string">&quot;200天后是：&quot;</span> + y + <span class="string">&quot;年&quot;</span> + m + <span class="string">&quot;月&quot;</span> + d + <span class="string">&quot;日&quot;</span> + getWeek(wk));</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//查表法，查询星期几</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">getWeek</span><span class="params">(<span class="type">int</span> w)</span> &#123;<span class="comment">//w = 1 --- 7</span></span><br><span class="line">    <span class="comment">//做一个表(数组)</span></span><br><span class="line">    String[] weekArray = &#123;<span class="string">&quot;星期日&quot;</span>, <span class="string">&quot;星期一&quot;</span>, <span class="string">&quot;星期二&quot;</span>, <span class="string">&quot;星期三&quot;</span>, <span class="string">&quot;星期四&quot;</span>, <span class="string">&quot;星期五&quot;</span>, <span class="string">&quot;星期六&quot;</span>&#125;;</span><br><span class="line">    <span class="comment">//            索引      [0]      [1]       [2]      [3]       [4]      [5]      [6]</span></span><br><span class="line">    <span class="comment">//查表</span></span><br><span class="line">    <span class="keyword">return</span> weekArray[w - <span class="number">1</span>];</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="JDK8时间相关类"><a href="#JDK8时间相关类" class="headerlink" title="JDK8时间相关类"></a>JDK8时间相关类</h1><table>
+<thead>
+<tr>
+<th>JDK8时间类类名</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ZoneId</td>
+<td>时区</td>
+</tr>
+<tr>
+<td>Instant</td>
+<td>时间戳</td>
+</tr>
+<tr>
+<td>ZoneDateTime</td>
+<td>带时区的时间</td>
+</tr>
+<tr>
+<td>DateTimeFormatter</td>
+<td>用于时间的格式化和解析</td>
+</tr>
+<tr>
+<td>LocalDate</td>
+<td>年、月、日</td>
+</tr>
+<tr>
+<td>LocalTime</td>
+<td>时、分、秒</td>
+</tr>
+<tr>
+<td>LocalDateTime</td>
+<td>年、月、日、时、分、秒</td>
+</tr>
+<tr>
+<td>Duration</td>
+<td>时间间隔（秒，纳，秒）</td>
+</tr>
+<tr>
+<td>Period</td>
+<td>时间间隔（年，月，日）</td>
+</tr>
+<tr>
+<td>ChronoUnit</td>
+<td>时间间隔（所有单位）</td>
+</tr>
+</tbody></table>
+<h1 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h1><h2 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h2><p>Java提供了两个类型系统，基本类型与引用类型，使用基本类型在于效率，然而很多情况，会创建对象使用，因为对象可以做更多的功能，如果想要我们的基本类型像对象一样操作，就可以使用基本类型对应的包装类，如下：</p>
+<table>
+<thead>
+<tr>
+<th>基本类型</th>
+<th>对应的包装类（位于java.lang包中）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>byte</td>
+<td>Byte</td>
+</tr>
+<tr>
+<td>short</td>
+<td>Short</td>
+</tr>
+<tr>
+<td>int</td>
+<td>​<strong>Integer</strong></td>
+</tr>
+<tr>
+<td>long</td>
+<td>Long</td>
+</tr>
+<tr>
+<td>float</td>
+<td>Float</td>
+</tr>
+<tr>
+<td>double</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>char</td>
+<td>​<strong>Character</strong></td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>Boolean</td>
+</tr>
+</tbody></table>
+<h2 id="Integer类"><a href="#Integer类" class="headerlink" title="Integer类"></a>Integer类</h2><ul>
+<li>Integer类概述<br>包装一个对象中的原始类型 int 的值</li>
+<li>Integer类构造方法及静态方法</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public Integer(int   value)</td>
+<td>根据 int 值创建 Integer 对象(过时)</td>
+</tr>
+<tr>
+<td>public Integer(String s)</td>
+<td>根据 String 值创建 Integer 对象(过时)</td>
+</tr>
+<tr>
+<td>public static Integer valueOf(int i)</td>
+<td>返回表示指定的 int 值的 Integer   实例</td>
+</tr>
+<tr>
+<td>public static Integer valueOf(String s)</td>
+<td>返回保存指定String值的 Integer 对象</td>
+</tr>
+<tr>
+<td>static string tobinarystring(int i)</td>
+<td>得到二进制</td>
+</tr>
+<tr>
+<td>static string tooctalstring(int i)</td>
+<td>得到八进制</td>
+</tr>
+<tr>
+<td>static string toHexstring(int i)</td>
+<td>得到十六进制</td>
+</tr>
+<tr>
+<td>static int parseInt(string s)</td>
+<td>将字符串类型的整数转成int类型的整数</td>
+</tr>
+</tbody></table>
+<ul>
+<li>示例代码</li>
+</ul>
+<h2 id="装箱与拆箱"><a href="#装箱与拆箱" class="headerlink" title="装箱与拆箱"></a>装箱与拆箱</h2><p>基本类型与对应的包装类对象之间，来回转换的过程称为”装箱“与”拆箱“：</p>
+<ul>
+<li><strong>装箱</strong>：从基本类型转换为对应的包装类对象。</li>
+<li><strong>拆箱</strong>：从包装类对象转换为对应的基本类型。</li>
+</ul>
+<p>用Integer与 int为例：（看懂代码即可）</p>
+<p>基本数值—-&gt;包装对象</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Integer</span> <span class="variable">i</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Integer</span>(<span class="number">4</span>);<span class="comment">//使用构造函数函数</span></span><br><span class="line"><span class="type">Integer</span> <span class="variable">iii</span> <span class="operator">=</span> Integer.valueOf(<span class="number">4</span>);<span class="comment">//使用包装类中的valueOf方法</span></span><br></pre></td></tr></table></figure>
+
+<p>包装对象—-&gt;基本数值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> i.intValue();</span><br></pre></td></tr></table></figure>
+
+<h2 id="自动装箱与自动拆箱"><a href="#自动装箱与自动拆箱" class="headerlink" title="自动装箱与自动拆箱"></a>自动装箱与自动拆箱</h2><p>由于我们经常要做基本类型与包装类之间的转换，从Java 5（JDK 1.5）开始，基本类型与包装类的装箱、拆箱动作可以自动完成。例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Integer</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">4</span>;<span class="comment">//自动装箱。相当于Integer i = Integer.valueOf(4);</span></span><br><span class="line">i = i + <span class="number">5</span>;<span class="comment">//等号右边：将i对象转成基本数值(自动拆箱) i.intValue() + 5;</span></span><br><span class="line"><span class="comment">//加法运算完成后，再次装箱，把基本数值转成对象。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="基本类型与字符串之间的转换"><a href="#基本类型与字符串之间的转换" class="headerlink" title="基本类型与字符串之间的转换"></a>基本类型与字符串之间的转换</h2><h3 id="基本类型转换为String"><a href="#基本类型转换为String" class="headerlink" title="基本类型转换为String"></a>基本类型转换为String</h3><ul>
+<li>转换方式</li>
+<li>方式一：直接在数字后加一个空字符串</li>
+<li>方式二：通过String类静态方法valueOf()</li>
+<li>示例代码</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//int --- String</span></span><br><span class="line"><span class="type">int</span> <span class="variable">number</span> <span class="operator">=</span> <span class="number">100</span>;</span><br><span class="line"><span class="comment">//方式1</span></span><br><span class="line"><span class="type">String</span> <span class="variable">s1</span> <span class="operator">=</span> number + <span class="string">&quot;&quot;</span>;</span><br><span class="line">System.out.println(s1);</span><br><span class="line"><span class="comment">//方式2</span></span><br><span class="line"><span class="comment">//public static String valueOf(int i)</span></span><br><span class="line"><span class="type">String</span> <span class="variable">s2</span> <span class="operator">=</span> String.valueOf(number);</span><br><span class="line">System.out.println(s2);</span><br><span class="line">System.out.println(<span class="string">&quot;--------&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="String转换成基本类型"><a href="#String转换成基本类型" class="headerlink" title="String转换成基本类型"></a>String转换成基本类型</h3><p>除了Character类之外，其他所有包装类都具有parseXxx静态方法可以将字符串参数转换为对应的基本类型：</p>
+<ul>
+<li><code>public static byte parseByte(String s)</code>：将字符串参数转换为对应的byte基本类型。</li>
+<li><code>public static short parseShort(String s)</code>：将字符串参数转换为对应的short基本类型。</li>
+<li><strong><code>public static int parseInt(String s)</code>：将字符串参数转换为对应的int基本类型。</strong></li>
+<li><strong><code>public static long parseLong(String s)</code>：将字符串参数转换为对应的long基本类型。</strong></li>
+<li><code>public static float parseFloat(String s)</code>：将字符串参数转换为对应的float基本类型。</li>
+<li><code>public static double parseDouble(String s)</code>：将字符串参数转换为对应的double基本类型。</li>
+<li><code>public static boolean parseBoolean(String s)</code>：将字符串参数转换为对应的boolean基本类型。</li>
+</ul>
+<p>代码使用（仅以Integer类的静态方法parseXxx为例）如：</p>
+<ul>
+<li>转换方式<ul>
+<li>方式一：先将字符串数字转成Integer，再调用valueOf()方法</li>
+<li>方式二：通过Integer静态方法parseInt()进行转换</li>
+</ul>
+</li>
+<li>示例代码</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//String --- int</span></span><br><span class="line"><span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> <span class="string">&quot;100&quot;</span>;</span><br><span class="line"><span class="comment">//方式1：String --- Integer --- int</span></span><br><span class="line"><span class="type">Integer</span> <span class="variable">i</span> <span class="operator">=</span> Integer.valueOf(s);</span><br><span class="line"><span class="comment">//public int intValue()</span></span><br><span class="line"><span class="type">int</span> <span class="variable">x</span> <span class="operator">=</span> i.intValue();</span><br><span class="line">System.out.println(x);</span><br><span class="line"><span class="comment">//方式2</span></span><br><span class="line"><span class="comment">//public static int parseInt(String s)</span></span><br><span class="line"><span class="type">int</span> <span class="variable">y</span> <span class="operator">=</span> Integer.parseInt(s);</span><br><span class="line">System.out.println(y)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
     </div>
 
     
@@ -368,9 +664,6 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/05/28/API-3/" rel="next" title="API(3)">
-                  API(3) <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
